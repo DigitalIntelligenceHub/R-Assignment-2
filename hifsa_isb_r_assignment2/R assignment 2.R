@@ -12,4 +12,8 @@ df<-wday(mdy(df), label=TRUE)
 df
 table(df)
 
+"What is the average age of patients"
+nage<-as.numeric(hospitaldata$Age) 
+mean(nage, na.rm = TRUE)
+
   
