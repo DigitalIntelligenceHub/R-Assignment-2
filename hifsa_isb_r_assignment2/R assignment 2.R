@@ -6,4 +6,10 @@ names(hospitaldata) <- gsub(x = names(hospitaldata),
                         replacement = " ")
 names(hospitaldata)
 
+"day of the week is expected to have most visits"
+df<-hospitaldata$Date
+df<-wday(mdy(df), label=TRUE)
+df
+table(df)
+
   
