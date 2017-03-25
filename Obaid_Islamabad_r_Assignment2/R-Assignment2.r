@@ -143,3 +143,15 @@ ids<-
 ids #Shows the id(s) of repeated patients
 
 
+# Q12.  Which patients visited again for the same problem?
+samep <-
+  hdfClean %>%
+  select(id,Specialty) %>%
+  group_by(id) %>%
+  summarize(problems=n_distinct(Specialty), visits=length(Specialty))%>%
+  filter(visits>problems)
+samep  
+# The above tabel sgow the id, and no of distinct problems that patient have and no of visits patient made
+# so if, no of visits is greater than no of problems patient have this means patient have  come more than 1 for atleast one of the problems
+# he got
+
