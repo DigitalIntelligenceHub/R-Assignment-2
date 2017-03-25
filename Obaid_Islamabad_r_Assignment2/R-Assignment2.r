@@ -69,4 +69,21 @@ DrEarnings # Dr Alaf Khan has the highest earnings!
 ggplot(data=DrEarnings,aes(x=ConsultingDoctor,y=Earning))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("ConsultingDoctor Earnings")+labs(x='Consulting DOctor',y='Earnings')
 
 
+# Q7. Which procedure type earns more money?
+
+#its same as above Question, jut need to group_by with Procedur instead of ConsultingDoctor
+# We dont need to clean totalcharges column again
+
+ProcedureEarnings <-
+  hdfClean %>%
+  group_by(Procedure) %>%
+  summarize(Earning=sum(TotalCharges)) %>%
+  arrange(desc(Earning))
+ProcedureEarnings  #Orthodontics earns more money
+
+#Plotting graph for ProcedureEarnings
+ggplot(data=ProcedureEarnings,aes(x=Procedure,y=Earning))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Earnings by Procedures")+labs(x='Procedures',y="Earnings")
+
+
+
 
