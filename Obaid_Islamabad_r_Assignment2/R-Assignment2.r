@@ -51,3 +51,22 @@ qplot(data=hdfClean,Sex,fill=Specialty)+ggtitle("Gender Speciality abundance")+l
 # As we can see from plot, both Male and Female have Dentist procedure in abundance
 
 
+
+# Q6. Which doctor is earning highest?
+
+#Cleaning totalCharges column (we will need in future to summ charges) by Converting them to numeric and replacing NA with 0
+hdfClean$TotalCharges <- as.numeric(as.character(hdfClean$TotalCharges))
+hdfClean[c('TotalCharges')][is.na(hdfClean[c('TotalCharges')])]<-0  #only chnage NA to 0 in TotalCharges Column
+DrEarnings <-
+  hdfClean %>%
+  group_by(ConsultingDoctor)%>%
+  summarize(Earning=sum(TotalCharges)) %>%
+  arrange(desc(Earning))
+
+DrEarnings # Dr Alaf Khan has the highest earnings!
+
+#Plottig graph for DoctorEarnings
+ggplot(data=DrEarnings,aes(x=ConsultingDoctor,y=Earning))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("ConsultingDoctor Earnings")+labs(x='Consulting DOctor',y='Earnings')
+
+
+
