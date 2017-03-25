@@ -155,3 +155,12 @@ samep
 # so if, no of visits is greater than no of problems patient have this means patient have  come more than 1 for atleast one of the problems
 # he got
 
+#Q13. What os median age for female and male?
+medianAge<-
+  hdfClean %>%
+  select(Sex,Age) %>%
+  group_by(Sex) %>%
+  summarize(MedianAge = median(Age,na.rm=TRUE))
+medianAge # Shows the median age for Female(F) and Male(M)
+
+
