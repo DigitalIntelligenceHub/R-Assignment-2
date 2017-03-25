@@ -123,3 +123,16 @@ hdfClean <-
 select(hdfClean,Time,Hour,Bracket)
 
 
+# Q10.  How many patients are repeated visitor?
+repPat <- 
+  select(hdfClean,id) %>%
+  group_by(id) %>%
+  summarize(visits=length(id)) %>%
+  arrange(desc(visits)) %>%
+  filter(visits >1)
+dim(repPat)  #37 Patients have more than one visits. Paient with id= 1 is very unfortunate, with 12 visits, i guess.
+
+#plotting
+ggplot(data=repPat,aes(x=factor(id),y=factor(visits)))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Patients with Repeated vists and their number of vists")+labs(x='Patient IDs',y='No. Of Vists')
+
+
