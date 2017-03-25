@@ -170,3 +170,15 @@ hdfClean$AmountBalance <-as.numeric(as.character(hdfClean$AmountBalance))
 sum(hdfClean$AmountBalance,na.rm=TRUE) #222500
 
 
+# Q15.  How much money was made by Procedure Type "Consultation"?
+
+#cleaning TotalCharges column
+hdfClean$TotalCharges <- as.numeric(as.character(hdfClean$TotalCharges))
+consult <-
+  hdfClean %>%
+  select(Procedure,TotalCharges) %>%
+  group_by(Procedure) %>%
+  filter(Procedure =='Consultation') %>%
+  summarize(TotalMoney= sum(TotalCharges,na.rm=TRUE)) 
+consult #83950 
+
