@@ -187,4 +187,8 @@ consult #83950
 cor<-cor(hdfClean$Age,hdfClean$AmountReceived, use='complete.obs')  #use is to ignore NA values
 cor
 
+# The answer is 0.13 which tell us that there is a weak positive (uphill) relation.
+ggplot(data=hdfClean,aes(x=Age,y=AmountReceived))+geom_smooth()
+# As we can see for plot, There exists a relation but is very weak linear relationship. We usually dnt consider cor values less than 0.05
+
 
