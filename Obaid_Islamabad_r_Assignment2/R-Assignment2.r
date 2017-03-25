@@ -164,3 +164,9 @@ medianAge<-
 medianAge # Shows the median age for Female(F) and Male(M)
 
 
+# Q14.  What is the total amount in balance?
+hdfClean$AmountBalance <-gsub("\\.00|,","",hdfClean$AmountBalance)
+hdfClean$AmountBalance <-as.numeric(as.character(hdfClean$AmountBalance))
+sum(hdfClean$AmountBalance,na.rm=TRUE) #222500
+
+
