@@ -248,6 +248,9 @@ totalEarnings <-
 totalEarnings
 # So that totalEarnings Show the actual earning by X Ray and Scalling , and their occurance in the whole data set
 
+#lets Plot this
+ggplot(data=totalEarnings,aes(x='',y=Earning,fill=Procedure))+geom_bar(width=1,stat='identity')+coord_polar('y',start=0)
+
 
 #Generating csv file from cleaned data
 write.csv(hdfClean, 'D:/Inbox Workplace/R Workspace/R Learning Assignment 2/R-Assignment-2/Obaid_Islamabad_r_Assignment2/Clean-HospitalData.csv', row.names=T)
