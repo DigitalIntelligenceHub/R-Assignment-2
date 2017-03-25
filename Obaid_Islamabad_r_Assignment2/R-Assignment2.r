@@ -249,3 +249,7 @@ totalEarnings
 # So that totalEarnings Show the actual earning by X Ray and Scalling , and their occurance in the whole data set
 
 
+#Generating csv file from cleaned data
+write.csv(hdfClean, 'D:/Inbox Workplace/R Workspace/R Learning Assignment 2/R-Assignment-2/Obaid_Islamabad_r_Assignment_2/Clean-HospitalData.csv', row.names=T)
+
+
