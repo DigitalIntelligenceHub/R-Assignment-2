@@ -43,4 +43,11 @@ mean(hdfClean$Age,na.rm = TRUE) #Average age is 32.7
 # Q4. How many childerns were entertained?
 count(filter(hdfClean,Age>=1,Age<=12))  #23 childerns were entertained    #Q to ask, if i use length instead of count it gives 15. y?
 
+# Q5. Which gender type had what kind of procedure in abundance?
+hdfClean$Sex <- gsub("f","F",hdfClean$Sex)
+hdfClean$Sex<-gsub("\\s|-",NA,hdfClean$Sex)
+qplot(data=hdfClean,Sex,fill=Specialty)+ggtitle("Gender Speciality abundance")+labs(x='Gender',y='No of patients')
+
+# As we can see from plot, both Male and Female have Dentist procedure in abundance
+
 
