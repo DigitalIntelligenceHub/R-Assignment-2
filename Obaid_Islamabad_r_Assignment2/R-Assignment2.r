@@ -192,3 +192,17 @@ ggplot(data=hdfClean,aes(x=Age,y=AmountReceived))+geom_smooth()
 # As we can see for plot, There exists a relation but is very weak linear relationship. We usually dnt consider cor values less than 0.05
 
 
+# Q17.  Which age group had highest number of visits?
+ageVisits<-
+  hdfClean %>%
+  select(id,Age) %>%
+  group_by(Age) %>%
+  summarize(Visits=length(Age)) %>%
+  arrange(desc(Visits)) %>%
+  filter(!is.na(Age))
+ageVisits
+#Plotting
+ggplot(data=ageVisits,aes(x=factor(Age),y=Visits))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Vists By Age")+labs(x='Age',y='Visits')
+#As we can see, Most no of vists are 30 but the Age is NA so we dont include that. After that, patient of age 30 have more visits than other.
+
+
