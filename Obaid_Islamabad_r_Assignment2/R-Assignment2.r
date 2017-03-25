@@ -248,6 +248,10 @@ totalEarnings <-
 totalEarnings
 # So that totalEarnings Show the actual earning by X Ray and Scalling , and their occurance in the whole data set
 
+#now lets sum these earnings
+paste("Total Earning by XRay and Scalling is: ", te, sep=" ")
+
+
 #lets Plot this
 ggplot(data=totalEarnings,aes(x='',y=Earning,fill=Procedure))+geom_bar(width=1,stat='identity')+coord_polar('y',start=0)
 
