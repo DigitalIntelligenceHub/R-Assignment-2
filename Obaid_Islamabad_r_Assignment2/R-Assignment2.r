@@ -233,7 +233,7 @@ earning2 <-
   ),
   TotalCharges=derivedFactor(
     "300" = (Procedure =='X Ray'),
-    "3000" = (Procedure =='Scalling'),
+    "3000"= (Procedure =='Scalling'),
     .method = "first",
     .default = 0
   ))  %>%
