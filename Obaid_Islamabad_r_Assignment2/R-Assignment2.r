@@ -39,3 +39,8 @@ ggplot(dayPop,aes(x=Day,y=visits))+geom_bar(stat="identity",fill="#8E44AD")+ggti
 hdfClean<- hdf
 hdfClean$Age <-as.numeric(as.character(hdfClean$Age))
 mean(hdfClean$Age,na.rm = TRUE) #Average age is 32.7 
+
+# Q4. How many childerns were entertained?
+count(filter(hdfClean,Age>=1,Age<=12))  #23 childerns were entertained    #Q to ask, if i use length instead of count it gives 15. y?
+
+
