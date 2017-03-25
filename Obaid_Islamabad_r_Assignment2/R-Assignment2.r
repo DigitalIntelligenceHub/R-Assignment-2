@@ -136,3 +136,10 @@ dim(repPat)  #37 Patients have more than one visits. Paient with id= 1 is very u
 ggplot(data=repPat,aes(x=factor(id),y=factor(visits)))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Patients with Repeated vists and their number of vists")+labs(x='Patient IDs',y='No. Of Vists')
 
 
+# Q11.  Give the id of repeated visitors
+ids<-
+  repPat %>%
+  select(id)
+ids #Shows the id(s) of repeated patients
+
+
