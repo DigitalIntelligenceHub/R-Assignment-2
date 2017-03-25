@@ -35,3 +35,7 @@ ggplot(dayPop,aes(x=Day,y=visits))+geom_bar(stat="identity",fill="#8E44AD")+ggti
 #The visits on Monday are greater than visits on other days of week, and also the probability of Monday is higher 
 # therefore, Monday is expected to have most visits
 
+# Q3. What is the average age of patients?
+hdfClean<- hdf
+hdfClean$Age <-as.numeric(as.character(hdfClean$Age))
+mean(hdfClean$Age,na.rm = TRUE) #Average age is 32.7 
