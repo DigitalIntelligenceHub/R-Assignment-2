@@ -86,4 +86,21 @@ ggplot(data=ProcedureEarnings,aes(x=Procedure,y=Earning))+geom_bar(stat='identit
 
 
 
+# Q8. Which time of day has highest frequency of visits by hours
+
+#Creating a column Hour 
+VisitsByHour <-
+  hdfClean %>%
+  select(Time) %>%
+  mutate(Hour = hour(hm(format(strptime(hdfClean$Time, "%I:%M %p"), "%H:%M")))) %>%
+  group_by(Hour) %>%
+  summarize(Visits=length(Hour)) %>%
+  arrange(desc(Visits))%>%
+  filter(!is.na(Hour))
+VisitsByHour # it seems at 1:00PM (13:00), the visits are maximum. The Hour for 2nd highest is sadly NA
+
+#plotting
+ggplot(data=VisitsByHour,aes(x=factor(Hour),y=factor(Visits)))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Visits By Hour")+labs(x='Hours (Standard Time)',y='Visits')
+
+
 
