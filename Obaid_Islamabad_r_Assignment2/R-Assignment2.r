@@ -182,3 +182,9 @@ consult <-
   summarize(TotalMoney= sum(TotalCharges,na.rm=TRUE)) 
 consult #83950 
 
+
+# Q16.  Is there any relation between Age and Total charges paid?
+cor<-cor(hdfClean$Age,hdfClean$AmountReceived, use='complete.obs')  #use is to ignore NA values
+cor
+
+
