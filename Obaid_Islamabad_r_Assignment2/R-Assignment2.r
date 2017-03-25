@@ -206,3 +206,46 @@ ggplot(data=ageVisits,aes(x=factor(Age),y=Visits))+geom_bar(stat='identity',fill
 #As we can see, Most no of vists are 30 but the Age is NA so we dont include that. After that, patient of age 30 have more visits than other.
 
 
+# Q18.  What is the total cost earned by Procedure Type X Ray and Scalling together?
+earning <-
+  hdfClean %>%
+  select(Procedure,TotalCharges) %>%
+  filter(Procedure=='X Ray'|Procedure=='Scalling') %>%
+  group_by(Procedure) %>%
+  summarize(Occurance=n(), Earning=sum(TotalCharges)) 
+earning
+# Scalling = 16500, X Ray = 5800. 
+# As we can see from results, x Ray occured more than Scalling and still earned less than scalling. One thing we can conclude from this is
+#that the XRay fee is less than Scalling fee.
+
+#BUTTTTTT!!!, there are procedures in which xray was done along with some other procedure :same for scalling
+# now for better results, we dig deep
+
+earning2 <-
+  hdfClean %>%  
+  select(Procedure,TotalCharges) %>%
+  filter(  grepl("X Ray",Procedure) | grepl("Scalling",Procedure),nchar(as.character(Procedure))>8) %>%
+  mutate(Procedure= derivedFactor(
+    "X Ray" = (grepl("X Ray",Procedure)==TRUE),
+    "Scalling" = (grepl("Scalling",Procedure)==TRUE),
+    .method = "first",
+    .default = 0
+  ),
+  TotalCharges=derivedFactor(
+    "300" = (Procedure =='X Ray'),
+    "3000" = (Procedure =='Scalling'),
+    .method = "first",
+    .default = 0
+  ))  %>%
+  group_by(Procedure) %>%
+  summarize(Occurance=n(),Earning=sum(as.numeric(as.character(TotalCharges))))
+
+
+totalEarnings <-
+  rbind(earning,earning2) %>%
+  group_by(Procedure) %>%
+  summarize(Occurance=sum(Occurance),Earning=sum(as.numeric(as.character(Earning))))
+totalEarnings
+# So that totalEarnings Show the actual earning by X Ray and Scalling , and their occurance in the whole data set
+
+
