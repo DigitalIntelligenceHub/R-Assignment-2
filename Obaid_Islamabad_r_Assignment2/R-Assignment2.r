@@ -103,4 +103,23 @@ VisitsByHour # it seems at 1:00PM (13:00), the visits are maximum. The Hour for 
 ggplot(data=VisitsByHour,aes(x=factor(Hour),y=factor(Visits)))+geom_bar(stat='identity',fill='#8E44AD')+ggtitle("Visits By Hour")+labs(x='Hours (Standard Time)',y='Visits')
 
 
+# Q9. Create a bracket of time
+
+#Create column hour in hdfClean
+hdfClean <-
+  hdfClean %>%
+  mutate(Hour = hour(hm(format(strptime(Time,"%I:%M %p"),format="%H:%M"))))
+
+hdfClean <-
+  hdfClean %>%
+  mutate( Bracket = derivedFactor(
+    "Morning" = (Hour>=6 & Hour<=12),
+    "Afternoon" = (Hour>=12 & Hour<=16),
+    "Evening" = (Hour>=14 & Hour<=19),
+    "Night" =((Hour>=19 & Hour<=23) | (Hour>=0 & Hour<=6) ),
+    .method = "first",
+    .default = 0
+  ))
+select(hdfClean,Time,Hour,Bracket)
+
 
