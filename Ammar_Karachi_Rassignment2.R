@@ -92,3 +92,9 @@ print(length(groupOfrepeatedVisitors))
 
 # Question 11. Give us the id of repeated visitors.
 print(groupOfrepeatedVisitors)
+
+# Question 12. Which patients visited again for the same problem? 
+# Group by id and procedure and selecting only values which are greater than 1
+sameProblem <- count(df,id,Procedure)
+sameProblem <- sameProblem$id[sameProblem$n > 1]
+print(sameProblem)
