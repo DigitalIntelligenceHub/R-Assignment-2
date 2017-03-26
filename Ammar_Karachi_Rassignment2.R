@@ -88,4 +88,7 @@ df <- mutate(df, dayTime)
 # 37 patients are repeated visitors
 groupOfrepeatedVisitors <- count(df,id)
 groupOfrepeatedVisitors <- groupOfrepeatedVisitors$id[groupOfrepeatedVisitors$n>1]
+print(length(groupOfrepeatedVisitors))
+
+# Question 11. Give us the id of repeated visitors.
 print(groupOfrepeatedVisitors)
