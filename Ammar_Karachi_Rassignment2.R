@@ -35,3 +35,12 @@ for(i in 1:length(df$Age)){
     children_count <- children_count + 1
 }
 print(children_count)
+
+# Question 5. Which gender type had what kind of procedure in abundance?
+df$Sex = gsub("f", "F", df$Sex)
+print("For Male:\n")
+plot_ly(x = df$Procedure[df$Sex=="M"], type = "histogram")
+table(df$Procedure[df$Sex=="M"])
+print("For Female:\n")
+plot_ly(x = df$Procedure[df$Sex=="F"], type = "histogram")
+table(df$Procedure[df$Sex=="F"])
