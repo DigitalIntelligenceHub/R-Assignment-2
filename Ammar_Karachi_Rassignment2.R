@@ -17,3 +17,12 @@ strWday <- unlist(strWday, recursive = FALSE)
 maxDay <- table(strWday)
 print(maxDay)
 
+# Question 3. What is the average age of patients?
+# By removing "M" and replacing "","-" with 0, we get 28.4 as the average age of patient
+df$Age <- as.character(df$Age)
+df$Age[df$Age == ""] <- "0"
+df$Age[df$Age == "-"] <- "0"
+df$Age <- gsub("M", "", df$Age)
+df$Age <- as.double(df$Age)
+average_age = mean(df$Age)
+print(average_age)
