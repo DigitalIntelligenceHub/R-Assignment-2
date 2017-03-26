@@ -65,4 +65,6 @@ fmed
 mmed <- subset(hospitaldata, Sex=='M' , select = Age)
 mmed
 
-
+"14. What is the total amount in balance?"
+g <- hospitaldata$`Amount  Balance` <- as.numeric(gsub('[,]', '', hospitaldata$`Amount  Balance`))
+sum(g, na.rm = T)
