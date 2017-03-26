@@ -49,5 +49,8 @@ Afternoon, 4 pm- 7pm, Evening, 7pm - 6 am, Night)."
 
 "10. How many patients are repeated visitors?"
 b<- ddply(hospitaldata,.(id),nrow )
-repeated <-subset(b, b$V1>1)%>%
-View()
+repeated <-subset(b, b$V1>1)
+View(repeated)
+
+"11. Give us the id of repeated visitors."
+View(repeated)
