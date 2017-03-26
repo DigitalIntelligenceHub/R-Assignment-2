@@ -1,3 +1,4 @@
+library(plyr)
 library(dplyr)
 library(lubridate)
 library(tidyr)
@@ -38,3 +39,15 @@ hospitaldata$`Amount Received By`[which.max(a)] giving same results "
 
 "7. Which procedure type earns more money?"
 max(a, na.rm = T, filter = c(hospitaldata$Procedure))
+
+"8. Which time of the day has highest frequency of visits by hour?"
+
+"9. Create a bracket of time by 
+Morning, Afternoon, Evening, Night 
+(6am - 12pm - Morning, 12 pm- 4 pm, 
+Afternoon, 4 pm- 7pm, Evening, 7pm - 6 am, Night)."
+
+"10. How many patients are repeated visitors?"
+b<- ddply(hospitaldata,.(id),nrow )
+repeated <-subset(b, b$V1>1)%>%
+View()
