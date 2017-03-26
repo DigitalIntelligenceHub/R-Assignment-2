@@ -126,3 +126,7 @@ print(sum(df$TotalCharges[df$Procedure=="Consultation"]))
 # says that there is no strong relation between Age and Total Charges
 print(cor(df$Age, df$TotalCharges))
 qplot(df$Age,df$TotalCharges)
+
+# Question 17. Which Age group had highest number of visits?
+# Histogram shows that Age group of 20-40years old visits the most.
+plot_ly(x = df$Age, type = "histogram", nbinsx = 5)
