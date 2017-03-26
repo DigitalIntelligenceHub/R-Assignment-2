@@ -62,3 +62,11 @@ print(max(totalOfEachDoc[[2]]))
 # Following the steps of last question, the procedure type which earns most money is "Orthodontics"
 totalOfEachProc <- aggregate(df$TotalCharges, by=list(Category=df$Procedure), FUN=sum)
 print(max(totalOfEachProc[[2]]))
+
+# Question 8. Which time of the day has highest frequency of visits by hour? 
+# This line of code counts the frequency of each unique time the dataset has. It gives 29 as the highest frquency
+# which means 13:00 is the most busiest hour of the day. Plot also shows the same.
+df$Time <- as.POSIXct(df$Time,format="%I:%M %p")
+busyHours <- hour(df$Time)
+freqTable <- table(busyHours)
+plot_ly(x = z, type = "histogram")
