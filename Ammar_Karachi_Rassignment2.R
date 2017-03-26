@@ -26,3 +26,12 @@ df$Age <- gsub("M", "", df$Age)
 df$Age <- as.double(df$Age)
 average_age = mean(df$Age)
 print(average_age)
+
+# Question 4. How many children were entertained? (Make a Bracket of Age from 1-12) 
+# 24 children were entertained.
+children_count <- 0
+for(i in 1:length(df$Age)){
+  if(df$Age[i] > 0 & df$Age[i] <= 12)
+    children_count <- children_count + 1
+}
+print(children_count)
