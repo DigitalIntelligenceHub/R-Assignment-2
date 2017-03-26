@@ -57,3 +57,8 @@ df$TotalCharges[df$TotalCharges=="Cancelled"] <- "0"
 df$TotalCharges <- as.double(df$TotalCharges)
 totalOfEachDoc <- aggregate(df$TotalCharges, by=list(Category=df$ConsultingDoctor), FUN=sum)
 print(max(totalOfEachDoc[[2]]))
+
+# Question 7. Which procedure type earns more money? 
+# Following the steps of last question, the procedure type which earns most money is "Orthodontics"
+totalOfEachProc <- aggregate(df$TotalCharges, by=list(Category=df$Procedure), FUN=sum)
+print(max(totalOfEachProc[[2]]))
