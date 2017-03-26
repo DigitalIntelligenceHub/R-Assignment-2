@@ -30,8 +30,11 @@ table() %>%
   View()
 
 "6. Which Doctor is earning highest?"
-a<-hospitaldata$`Amount  Received `
+a<-hospitaldata$`Total  Charges`
 max(a, na.rm = TRUE, filter =c(hospitaldata$`Amount Received By`) )
 
 "alternatively max(a, na.rm = TRUE, select =c(hospitaldata$`Amount Received By`) ) and 
 hospitaldata$`Amount Received By`[which.max(a)] giving same results "
+
+"7. Which procedure type earns more money?"
+max(a, na.rm = T, filter = c(hospitaldata$Procedure))
