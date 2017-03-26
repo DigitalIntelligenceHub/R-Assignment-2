@@ -98,3 +98,11 @@ print(groupOfrepeatedVisitors)
 sameProblem <- count(df,id,Procedure)
 sameProblem <- sameProblem$id[sameProblem$n > 1]
 print(sameProblem)
+
+# Question 13. What is the median age for Females and Males? 
+print("For Male: ")
+medM <-median(df$Age[df$Sex == "M"], na.rm = TRUE)
+cat("Median is",medM)
+print("For Female: ")
+medF <-median(df$Age[df$Sex == "F"], na.rm = TRUE)
+cat("Median is",medF)
