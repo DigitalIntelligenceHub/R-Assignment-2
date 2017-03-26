@@ -37,10 +37,23 @@ for(i in 1:length(df$Age)){
 print(children_count)
 
 # Question 5. Which gender type had what kind of procedure in abundance?
-df$Sex = gsub("f", "F", df$Sex)
+df$Sex[df$Sex==""] <- "NA"
+df$Sex[df$Sex=="-"] <- "NA"
+df$Sex <- gsub("f", "F", df$Sex)
 print("For Male:\n")
 plot_ly(x = df$Procedure[df$Sex=="M"], type = "histogram")
 table(df$Procedure[df$Sex=="M"])
 print("For Female:\n")
 plot_ly(x = df$Procedure[df$Sex=="F"], type = "histogram")
 table(df$Procedure[df$Sex=="F"])
+
+# Question 6. Which Doctor is earning highest?
+# First we clean list of charges then converting list of total charges to double. 
+# Finally using aggregate function to group according to doctors and taking
+# sum at same time. Taking max from the list gives us the answer i.e. 'Dr Alaf Khan: 513050'
+df$TotalCharges <- as.character(df$TotalCharges)
+df$TotalCharges[df$TotalCharges==""] <- "0"
+df$TotalCharges[df$TotalCharges=="Cancelled"] <- "0"
+df$TotalCharges <- as.double(df$TotalCharges)
+totalOfEachDoc <- aggregate(df$TotalCharges, by=list(Category=df$ConsultingDoctor), FUN=sum)
+print(max(totalOfEachDoc[[2]]))
