@@ -70,3 +70,16 @@ df$Time <- as.POSIXct(df$Time,format="%I:%M %p")
 busyHours <- hour(df$Time)
 freqTable <- table(busyHours)
 plot_ly(x = z, type = "histogram")
+
+#9. Create a bracket of time by Morning, Afternoon, Evening, Night (6am - 12pm - Morning, 12 pm- 4 pm, 
+# Afternoon, 4 pm- 7pm, Evening, 7pm - 6am, Night).
+# Because the time was in 24hour format I converted time according to it and also the last condition was changed due to
+# the 24hours format.
+dayTime <- list()
+dayTime[busyHours >= 6 & busyHours <= 12] <- "Morning"
+dayTime[busyHours > 12 & busyHours <= 16] <- "Afternoon"
+dayTime[busyHours > 16 & busyHours <= 19] <- "Evening"
+dayTime[busyHours > 19] <- "Night"
+dayTime[is.na(busyHours)] <- "NA"
+dayTime <- unlist(dayTime, recursive = FALSE)
+df <- mutate(df, dayTime)
