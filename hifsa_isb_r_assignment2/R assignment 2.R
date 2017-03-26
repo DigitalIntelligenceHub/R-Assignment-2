@@ -54,3 +54,7 @@ View(repeated)
 
 "11. Give us the id of repeated visitors."
 View(repeated)
+
+"12. Which patients visited again for the same problem"
+select(group_by(hospitaldata, id,  Specialty))%>%
+     View()
