@@ -1,3 +1,6 @@
+library(plotly)
+library(lubridate)
+library(dplyr)
 # Reading the dataset
 df <- read.csv("C:/Users/Ammar/Documents/hospitaldata.csv",header=TRUE,sep=",")
 
@@ -40,10 +43,8 @@ print(children_count)
 df$Sex[df$Sex==""] <- "NA"
 df$Sex[df$Sex=="-"] <- "NA"
 df$Sex <- gsub("f", "F", df$Sex)
-print("For Male:\n")
 plot_ly(x = df$Procedure[df$Sex=="M"], type = "histogram")
 table(df$Procedure[df$Sex=="M"])
-print("For Female:\n")
 plot_ly(x = df$Procedure[df$Sex=="F"], type = "histogram")
 table(df$Procedure[df$Sex=="F"])
 
@@ -56,12 +57,12 @@ df$TotalCharges[df$TotalCharges==""] <- "0"
 df$TotalCharges[df$TotalCharges=="Cancelled"] <- "0"
 df$TotalCharges <- as.double(df$TotalCharges)
 totalOfEachDoc <- aggregate(df$TotalCharges, by=list(Category=df$ConsultingDoctor), FUN=sum)
-print(max(totalOfEachDoc[[2]]))
+print(totalOfEachDoc$Category[totalOfEachDoc$x == max(totalOfEachDoc[[2]])])
 
 # Question 7. Which procedure type earns more money? 
 # Following the steps of last question, the procedure type which earns most money is "Orthodontics"
 totalOfEachProc <- aggregate(df$TotalCharges, by=list(Category=df$Procedure), FUN=sum)
-print(max(totalOfEachProc[[2]]))
+print(totalOfEachProc$Category[totalOfEachProc$x == max(totalOfEachProc[[2]])])
 
 # Question 8. Which time of the day has highest frequency of visits by hour? 
 # This line of code counts the frequency of each unique time the dataset has. It gives 29 as the highest frquency
@@ -69,7 +70,7 @@ print(max(totalOfEachProc[[2]]))
 df$Time <- as.POSIXct(df$Time,format="%I:%M %p")
 busyHours <- hour(df$Time)
 freqTable <- table(busyHours)
-plot_ly(x = z, type = "histogram")
+plot_ly(x = busyHours, type = "histogram", autobinx = TRUE)
 
 # Question 9. Create a bracket of time by Morning, Afternoon, Evening, Night (6am - 12pm - Morning, 12 pm- 4 pm, 
 # Afternoon, 4 pm- 7pm, Evening, 7pm - 6am, Night).
@@ -100,12 +101,10 @@ sameProblem <- sameProblem$id[sameProblem$n > 1]
 print(sameProblem)
 
 # Question 13. What is the median age for Females and Males? 
-print("For Male: ")
 medM <-median(df$Age[df$Sex == "M"], na.rm = TRUE)
-cat("Median is",medM)
-print("For Female: ")
+cat("Median for male is",medM)
 medF <-median(df$Age[df$Sex == "F"], na.rm = TRUE)
-cat("Median is",medF)
+cat("Median for female is",medF)
 
 # Question 14. What is the total amount in balance? 
 # Removing all the nondigits. And taking the sum. The answer is Rs.222500
