@@ -58,3 +58,11 @@ View(repeated)
 "12. Which patients visited again for the same problem"
 select(group_by(hospitaldata, id,  Specialty))%>%
      View()
+
+"13. What is the median age for Females and Males?"
+fmed <- subset(hospitaldata, Sex=='F' , select = Age)
+fmed
+mmed <- subset(hospitaldata, Sex=='M' , select = Age)
+mmed
+
+
