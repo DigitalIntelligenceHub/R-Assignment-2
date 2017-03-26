@@ -116,3 +116,7 @@ df$AmountBalance[df$AmountBalance=="-"] <- "0"
 df$AmountBalance[df$AmountBalance==""] <- "0"
 df$AmountBalance <- as.double(df$AmountBalance)
 print(sum(df$AmountBalance))
+
+#Question 15. How much money was made by Procedure Type "Consultation"?
+# Summing up the amount after excluding Cancelled from it gives us Rs. 83,950.
+print(sum(df$TotalCharges[df$Procedure=="Consultation"]))
