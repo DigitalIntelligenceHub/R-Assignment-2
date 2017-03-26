@@ -120,3 +120,9 @@ print(sum(df$AmountBalance))
 #Question 15. How much money was made by Procedure Type "Consultation"?
 # Summing up the amount after excluding Cancelled from it gives us Rs. 83,950.
 print(sum(df$TotalCharges[df$Procedure=="Consultation"]))
+
+# Question 16. Is there a relation between Age and Total Charges paid? 
+# Age list is taken form previous question. The plot is not giving satifying answer but the value of correlation
+# says that there is no strong relation between Age and Total Charges
+print(cor(df$Age, df$TotalCharges))
+qplot(df$Age,df$TotalCharges)
