@@ -130,3 +130,7 @@ qplot(df$Age,df$TotalCharges)
 # Question 17. Which Age group had highest number of visits?
 # Histogram shows that Age group of 20-40years old visits the most.
 plot_ly(x = df$Age, type = "histogram", nbinsx = 5)
+
+# Question 18.  What is the total cost earned by Procedure Type X Ray and Scalling together?
+# The sum of X Ray and Scalling is Rs. 22300.
+print(sum(df$TotalCharges[df$Procedure == 'X Ray' | df$Procedure == 'Scalling']))
