@@ -106,3 +106,13 @@ cat("Median is",medM)
 print("For Female: ")
 medF <-median(df$Age[df$Sex == "F"], na.rm = TRUE)
 cat("Median is",medF)
+
+# Question 14. What is the total amount in balance? 
+# Removing all the nondigits. And taking the sum. The answer is Rs.222500
+df$AmountBalance <- as.character(df$AmountBalance)
+df$AmountBalance <- gsub(" ","", df$AmountBalance)
+df$AmountBalance <- gsub(",","", df$AmountBalance)
+df$AmountBalance[df$AmountBalance=="-"] <- "0"
+df$AmountBalance[df$AmountBalance==""] <- "0"
+df$AmountBalance <- as.double(df$AmountBalance)
+print(sum(df$AmountBalance))
