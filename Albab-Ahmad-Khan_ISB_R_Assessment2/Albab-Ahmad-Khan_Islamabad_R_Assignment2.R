@@ -121,3 +121,10 @@ x <- df %>%
     filter(n>1)
 View(df)
 df$Age <- as.numeric(df$Age)
+
+#Question 13
+# What is the median age for Females and Males?
+  df %>%
+    filter(Sex != "") %>%
+    group_by(Sex) %>%        
+    summarise(Median = median(Age, na.rm=TRUE))
