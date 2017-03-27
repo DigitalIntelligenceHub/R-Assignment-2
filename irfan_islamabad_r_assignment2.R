@@ -90,3 +90,12 @@ repeated_visitors <- datahosp %>%
 
 repeated_visitors_id <- repeated_visitors$id
 repeated_visitors_id
+
+# 12. Which patients visited again for the same problem? 
+repeated_visitors_same_prob <- datahosp %>%
+  group_by(id, Specialty) %>% 
+  summarize(freq = n()) %>% 
+  filter(freq > 1)
+
+
+repeated_visitors_same_prob$id
