@@ -79,6 +79,10 @@ sum(proct$`Total  Charges`, na.rm= T)
 d <-as.numeric(hospitaldata$Age)
 f <-as.numeric(hospitaldata$`Total  Charges`)
 cor.test(x=d,y=f)
-"17. Which Age group had highest number of visits?
-18. What is the total cost earned by Procedure Type X Ray and Scalling together?
-"
+
+"17. Which Age group had highest number of visits?"
+
+"18. What is the total cost earned by Procedure Type X Ray and Scalling together?"
+cost1 <- subset(hospitaldata, Procedure == "X Ray")
+cost2 <- subset(hospitaldata, Procedure == "Scalling")
+sum(cost1$`Total  Charges`,cost2$`Total  Charges`, na.rm= T)
