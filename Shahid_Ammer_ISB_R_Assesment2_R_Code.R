@@ -12,3 +12,9 @@ mydf
 names(mydf)
 names(mydf) <- sub("[.]+$", "", gsub("[.]+", " ", names(mydf)))
 names(mydf)
+
+# 2. Which day of the week is expected to have most visits?
+#Question 2
+mydf <- mydf %>% separate(Date, c('Day', 'Date'), sep="," , extra="merge")
+most_expected_day <- mydf %>% count(Day) %>% slice(which.max(n))
+most_expected_day
