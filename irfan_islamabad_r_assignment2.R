@@ -81,3 +81,12 @@ repeated_visitors <- datahosp %>%
 
 repeated_visitors
 
+# 11. Give us the id of repeated visitors. 
+
+repeated_visitors <- datahosp %>%
+  group_by(id) %>% 
+  summarize(freq = n()) %>%
+  filter(freq > 1)
+
+repeated_visitors_id <- repeated_visitors$id
+repeated_visitors_id
