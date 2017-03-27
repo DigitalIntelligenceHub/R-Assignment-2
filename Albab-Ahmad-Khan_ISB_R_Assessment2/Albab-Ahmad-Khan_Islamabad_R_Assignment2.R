@@ -41,3 +41,14 @@ df %>%
   summarise(n=n()) %>%  
   slice(which.max(n)) %>%  
   arrange(desc(n))
+
+# Question 6 
+# Which Doctor is earning highest?
+View(df)
+df$TotalCharges <- as.numeric(df$TotalCharges)
+df %>%
+  filter(ConsultingDoctor != "") %>%
+  group_by(ConsultingDoctor)  %>%  
+  summarise(sum= sum(TotalCharges, na.rm = TRUE)) %>%  
+  slice(which.max(sum)) %>%  
+  arrange(desc(sum))
