@@ -127,3 +127,12 @@ earning_consultation
 
 cor(as.numeric(datahosp$Age), as.numeric(datahosp$`Total Charges`), use ="complete.obs")
 cor.test(as.numeric(datahosp$Age), as.numeric(datahosp$`Total Charges`), use ="complete.obs")
+
+# Q 17. Which Age group had highest number of visits?
+age_highest_visits <- datahosp %>%
+  group_by(Age) %>%
+  filter(Age != "NA") %>%
+  summarize(freq=n()) %>%
+  slice(which.max(freq))
+
+age_highest_visits
