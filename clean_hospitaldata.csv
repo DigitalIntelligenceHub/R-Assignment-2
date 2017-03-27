@@ -1,0 +1,223 @@
+,Date,id,Time,Age,Sex,ConsultingDoctor,Specialty,Procedure,TotalCharges,AmountReceived,AmountBalance,AmountReceivedBy,AmountinHospital,ReceptionistName,NextApt,TimeBracket
+1,1/1/2017,101,NA,40,F,Dr Kinza Alam,Gynae,C Section,30000,30000,NA, Mrs Shamsa ,NA,Hamza,NA,NA
+2,1/2/2017,150,3/27/2017 10:45,26,M,Nursing Staff,,Dressing,1500,1500,NA, Dr Saniya ,NA,Haris,NA,Morning
+3,1/2/2017,58,3/27/2017 12:38,30,F,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Fiza,NA,Afternoon
+4,1/2/2017,75,3/27/2017 13:00,40,M,Dr Riffat Naheed,Psychotherapist,Consultation,1500,1500,NA, Mrs Shamsa ,450,Zaheer,NA,Afternoon
+5,1/2/2017,97,3/27/2017 14:45,27,M,Dr Riffat Naheed,Psychotherapist,Consultation,2000,2000,NA, Mrs Shamsa ,600,Haris,NA,Afternoon
+6,1/2/2017,101,3/27/2017 15:00,40,F,Dr Kinza Alam,Gynae,C Section,35000,35000,NA, Dr Saniya ,NA,Haris,NA,Afternoon
+7,1/2/2017,26,3/27/2017 15:28,43,M,Dr Saniya,M/o,Consultation,2000,2000,NA, Dr Saniya ,NA,Fiza,NA,Afternoon
+8,1/2/2017,149,3/27/2017 15:45,28,F,Dr Fakiha,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Haris,NA,Afternoon
+9,1/2/2017,20,3/27/2017 15:45,2,F,Dr Fakiha,Dentist,Consultation,0,NA,NA,,NA,,NA,Afternoon
+10,1/2/2017,72,3/27/2017 17:00,40,M,Dr Fakiha,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Fiza,NA,Evening
+11,1/2/2017,54,3/27/2017 17:00,32,F,Dr Saniya,M/o,Consultation,2000,2000,NA, Dr Saniya ,NA,Fiza,NA,Evening
+12,1/2/2017,149,3/27/2017 17:30,28,F,Dr Fakiha,Dentist,Filling,2000,2000,NA, Mrs Shamsa ,2000,Fiza,NA,Evening
+13,1/3/2017,120,3/27/2017 13:00,76,F,Dr Saniya,M/o,Laboratory Test,0,NA,NA,,NA,Haris,NA,Afternoon
+14,1/3/2017,120,3/27/2017 15:25,75,F,Dr Saniya,M/o,,0,NA,NA,,NA,,NA,Afternoon
+15,1/3/2017,20,3/27/2017 18:10,36,F,Dr Kinza Alam,Gynae,Consultation,1500,1500,NA, Mrs Shamsa ,450,Haris,NA,Evening
+16,1/4/2017,40,3/27/2017 23:45,42,F,Dr Alaf Khan,Dentist,Consultation+Denture,1500,1500,NA, Brig Farrukh ,NA,Fiza,NA,NA
+17,1/4/2017,134,3/27/2017 12:40,23,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Brig Farrukh ,500,Fiza,NA,Afternoon
+18,1/4/2017,86,3/27/2017 20:10,48,F,Dr Kinza Alam,Gynae,Consultation,1500,1500,NA, Brig Farrukh ,450,Haris,NA,NA
+19,1/4/2017,114,3/27/2017 20:30,25,F,Dr Kinza Alam,Gynae,Consultation,1000,1000,NA, Brig Farrukh ,300,Haris,NA,NA
+20,1/5/2017,155,3/27/2017 12:40,50,F,Dr Alaf Khan,Dentist,Extraction,2000,2000,NA, Brig Farrukh ,2000,Fiza,NA,Afternoon
+21,1/5/2017,45,3/27/2017 14:00,60,F,Dr Alaf Khan,Dentist,R.P.D + Crown,4000,4000,NA, Brig Farrukh ,4000,Haris,NA,Afternoon
+22,1/5/2017,4,3/27/2017 14:00,0,M,Dr Irfan,General Surgeon,Consultation + Dressing,5000,5000,NA, Brig Farrukh ,4000,Haris,NA,Afternoon
+23,1/6/2017,38,3/27/2017 12:30,0,M,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+24,1/6/2017,130,3/27/2017 13:00,26,M,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+25,1/6/2017,97,3/27/2017 13:30,27,M,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+26,1/6/2017,50,NA,0,M,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Haris,NA,NA
+27,1/6/2017,78,3/27/2017 20:15,57,F,Dr Ali,Orthopedic,Consultation,6000,6000,NA, Mrs Shamsa ,3000,Haris,NA,NA
+28,1/7/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+29,1/9/2017,48,3/27/2017 12:36,39,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Fiza,NA,Afternoon
+30,1/9/2017,79,3/27/2017 13:30,6,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Fiza,NA,Afternoon
+31,1/9/2017,116,3/27/2017 14:30,26,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+32,1/9/2017,45,3/27/2017 15:15,60,F,Dr Alaf Khan,Dentist,R.P.D + Crown,7000,7000,NA, Mrs Shamsa ,7000,Fiza,NA,Afternoon
+33,1/9/2017,67,3/27/2017 17:20,26,M,Dr Alaf Khan,Dentist,Consultation+X Ray,800,800,NA, Mrs Shamsa ,800,Fiza,NA,Evening
+34,1/9/2017,36,3/27/2017 17:30,5,F,Dr Alaf Khan,Dentist,Consultation,250,250,NA, Mrs Shamsa ,250,Fiza,NA,Evening
+35,1/10/2017,17,3/27/2017 15:50,40,M,Dr Alaf Khan,Dentist,RCT (4 teeth) Bridge (9 teeth),10000,10000,NA, Mrs Shamsa ,NA,Fiza,1/16/2017,Afternoon
+36,1/10/2017,84,3/27/2017 18:00,9,F,Dr Irfan,General Surgeon,Consultation +   X Ray,3000,3000,NA, Mrs Shamsa ,3000,Mona,NA,Evening
+37,1/10/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+38,1/11/2017,57,NA,30,F,Dr Alaf Khan,Dentist,Laboratory Test,0,NA,NA, Mrs Shamsa ,NA,,NA,NA
+39,1/11/2017,119,3/27/2017 15:00,40,F,Dr Ammara,Gynae,Consultation + USG,1500,1500,NA, Mrs Shamsa ,500,Fiza,NA,Afternoon
+40,1/11/2017,145,3/27/2017 16:30,29,M,Dr Alaf Khan,Dentist,Crown,3000,3000,NA, Mrs Shamsa ,NA,Fiza,NA,Evening
+41,1/11/2017,92,3/27/2017 16:30,39,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Fiza,NA,Evening
+42,1/12/2017,63,3/27/2017 10:45,50,M,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Fiza,NA,Morning
+43,1/12/2017,63,3/27/2017 14:00,50,M,Dr Alaf Khan,Dentist,Scalling,3000,3000,NA, Mrs Shamsa ,3000,Fiza,NA,Afternoon
+44,1/12/2017,63,3/27/2017 14:00,50,M,Brig Asif,Medical Specialist,Consultation,500,500,NA, Mrs Shamsa ,150,Fiza,NA,Afternoon
+45,1/13/2017,45,3/27/2017 11:20,60,F,Dr Alaf Khan,Dentist,Polishing,500,500,NA, Mrs Shamsa ,500,Haris,NA,Morning
+46,1/13/2017,145,3/27/2017 15:00,29,M,Dr Fakiha,Dentist,Crown,1500,1500,NA, Mrs Shamsa ,1500,Fiza,NA,Afternoon
+47,1/13/2017,70,3/27/2017 20:00,48,M,Brig Farrukh,Anaesthetist,Consultation,3750,3750,NA, Dr Ammad ,3750,Mona,NA,NA
+48,1/14/2017,88,3/27/2017 16:30,45,F,Dr Fakiha,Dentist,Filling + X Rays,2600,2600,NA, Dr Ammad ,2600,Haris,NA,Evening
+49,1/14/2017,40,3/27/2017 18:30,42,F,Dr Fakiha,Dentist,Denture+Scalling+Filling,5500,5500,NA, Dr Ammad ,5500,Haris,NA,Evening
+50,1/15/2017,42,3/27/2017 21:00,29,F,Nursing Staff,,Pharmacy,900,900,NA, Dilshad ,900,Zaheer,NA,NA
+51,1/16/2017,7,NA,26,M,Nursing Staff,,Laboratory Test,0,NA,NA,,NA,,NA,NA
+52,1/16/2017,106,3/27/2017 13:30,34,M,Dr Alaf Khan,Dentist,Crown,5000,5000,NA, Dr Ammad ,5000,Fiza,NA,Afternoon
+53,1/16/2017,22,3/27/2017 18:00,50,F,Dr Zubair,M/o,Consultation,1000,1000,NA, Dr Ammad ,400,Haris,NA,Evening
+54,1/16/2017,88,3/27/2017 18:20,45,F,Dr Fakiha,Dentist,Extraction,2500,2500,NA, Dr Ammad ,2500,Haris,1/23/2017,Evening
+55,1/17/2017,52,3/27/2017 11:25,30,M,Dr Alaf Khan,Dentist,RCT,3000,3000,NA, Mrs Shamsa ,3000,Fiza,1/20/2017,Morning
+56,1/17/2017,17,3/27/2017 11:15,40,M,Dr Alaf Khan,Dentist,RCT (4 teeth) Bridge (9 teeth),38000,38000,NA, Mrs Shamsa ,38000,Fiza,NA,Morning
+57,1/17/2017,17,3/27/2017 13:10,40,M,Brig Asif,Medical Specialist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+58,1/17/2017,136,3/27/2017 15:30,29,M,Dr Fakiha,Dentist,Scalling,4000,4000,NA, Mrs Shamsa ,4000,Fiza,NA,Afternoon
+59,1/17/2017,27,3/27/2017 18:15,27,M,Dr Fakiha,Dentist,Filling,2000,2000,NA, Mrs Shamsa ,2000,Sohaib,1/19/2017,Evening
+60,1/18/2017,71,3/27/2017 21:40,23,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA,,300,Haris,NA,NA
+61,1/18/2017,12,3/27/2017 12:00,60,F,Dr Alaf Khan,Dentist,22 Unit Bridge,25500,25500,NA,,25500,Haris,NA,Afternoon
+62,1/18/2017,127,3/27/2017 14:00,52,F,Dr Alaf Khan,Dentist,Extraction,1000,1000,NA,,1000,Haris,NA,Afternoon
+63,1/18/2017,82,3/27/2017 17:00,21,M,Dr Zubair,M/o,Consultation,500,500,NA,,500,Haris,NA,Evening
+64,1/19/2017,103,NA,32,M,Nursing Staff,,Laboratory Test,0,NA,NA,,NA,,NA,NA
+65,1/19/2017,31,3/27/2017 11:00,58,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Mrs Shamsa ,500,Haris,NA,Morning
+66,1/19/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+67,1/19/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+68,1/20/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+69,1/21/2017,131,3/27/2017 10:15,26,F,Dr Alaf Khan,Dentist,X Ray,300,300,NA, Mrs Shamsa ,300,Haris,NA,Morning
+70,1/21/2017,101,3/27/2017 13:20,40,F,Dr Kinza Alam,Gynae,Consultation,1200,1200,NA, Mrs Shamsa ,360,Haris,NA,Afternoon
+71,1/21/2017,145,3/27/2017 13:30,29,M,Dr Fakiha,Dentist,Crown,500,500,NA, Mrs Shamsa ,500,Haris,NA,Afternoon
+72,1/23/2017,144,3/27/2017 12:15,33,M,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+73,1/23/2017,37,3/27/2017 13:00,30,F,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+74,1/23/2017,135,3/27/2017 13:15,28,F,Dr Riffat Naheed,Psychotherapist,Consultation,2000,2000,NA, Mrs Shamsa ,600,Haris,NA,Afternoon
+75,1/23/2017,59,3/27/2017 16:50,10,M,Dr Ali,Child Specialist,Consultation+ER Retain,2800,2800,NA, Mrs Shamsa ,1600,Haris,NA,Evening
+76,1/24/2017,130,3/27/2017 13:00,26,M,Dr Riffat Naheed,Psychotherapist,Consultation,800,800,NA, Mrs Shamsa ,240,Haris,NA,Afternoon
+77,1/24/2017,104,3/27/2017 13:15,19,M,Dr Riffat Naheed,Psychotherapist,Consultation,2000,2000,NA, Mrs Shamsa ,600,Haris,NA,Afternoon
+78,1/24/2017,98,3/27/2017 14:10,53,F,Dr Saad,Orthopedic,Consultation,1000,1000,NA, Mrs Shamsa ,600,Haris,NA,Afternoon
+79,1/24/2017,102,3/27/2017 13:30,30,M,Dr Riffat Naheed,Psychotherapist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Haris,NA,Afternoon
+80,1/25/2017,59,NA,10,M,Nursing Staff,,Laboratory Test,0,NA,NA,,NA,,NA,NA
+81,1/25/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+82,1/26/2017,73,3/27/2017 12:50,55,M,Dr Alaf Khan,Dentist,Consultation+X Ray,700,700,NA,,700,Haris,NA,Afternoon
+83,1/26/2017,116,3/27/2017 15:30,26,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA,,300,Haris,NA,Afternoon
+84,1/26/2017,125,3/27/2017 17:40,30,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA,,500,Haris,NA,Evening
+85,1/26/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+86,1/26/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+87,1/26/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+88,1/28/2017,129,NA,2.333333333,M,Dr Ali,Child Specialist,Consultation,1150,1150,NA, Mrs Shamsa ,NA,Sohaib,NA,NA
+89,1/28/2017,85,3/27/2017 18:45,0,F,Dr Irfan,General Surgeon,,3000,3000,NA, Mrs Shamsa ,NA,Sohaib,NA,Evening
+90,1/28/2017,147,3/27/2017 21:45,9,M,Nursing Staff,,Consultation,1000,1000,NA, Mrs Shamsa ,NA,Sub KB,NA,NA
+91,1/29/2017,1,NA,0,NA,Nursing Staff,,Pharmacy,0,NA,NA,,NA,,NA,NA
+92,1/30/2017,140,3/27/2017 13:00,28,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Afternoon
+93,1/30/2017,39,3/27/2017 13:30,47,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA, Dr Ammad ,300,Haris,NA,Afternoon
+94,1/30/2017,124,3/27/2017 17:40,49,F,Brig Asif,Medical Specialist,Consultation+ECG,1300,1300,NA, Dr Ammad ,600,Sohaib,NA,Evening
+95,1/30/2017,8,3/27/2017 17:35,19,M,Dr Qurat ul Ain,Dentist,Consultation+X Ray,800,800,NA, Dr Ammad ,800,Sohaib,NA,Evening
+96,1/30/2017,51,3/27/2017 18:00,31,M,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Sohaib,NA,Evening
+97,1/31/2017,152,3/27/2017 17:30,7,F,Dr Fakiha,Dentist,Filling,1000,1000,NA, Mrs Shamsa ,1000,Haris,NA,Evening
+98,1/31/2017,21,3/27/2017 18:30,26,M,Dr Zubair,M/o,Consultation,200,200,NA, Mrs Shamsa ,200,Mona,NA,Evening
+99,1/31/2017,115,3/27/2017 18:50,8,F,Dr Qurat ul Ain,Dentist,Extraction,1500,1500,NA, Mrs Shamsa ,1500,Haris,NA,Evening
+100,2/1/2017,109,3/27/2017 14:10,28,F,Dr Alaf Khan,Dentist,R.C.T,2000,2000,NA, Dr Ammad ,2000,Haris,2/6/2017,Afternoon
+101,2/1/2017,153,3/27/2017 14:10,17,F,Dr Alaf Khan,Dentist,Orthodontics,10000,10000,NA, Dr Ammad ,10000,Haris,2/6/2017,Afternoon
+102,2/1/2017,62,3/27/2017 13:00,54,M,Dr Alaf Khan,Dentist,Scalling,2000,2000,NA, Dr Ammad ,2000,Haris,NA,Afternoon
+103,2/1/2017,111,3/27/2017 13:40,35,F,Col Ulfat Ellahi,ENT,Consultation,1000,1000,NA, Dr Ammad ,300,Haris,NA,Afternoon
+104,2/1/2017,142,3/27/2017 18:00,45,M,Dr Qurat ul Ain,Dentist,Extraction,2000,2000,NA, Dr Ammad ,2000,Haris,NA,Evening
+105,2/2/2017,117,3/27/2017 12:00,30,F,Dr Shireen,M/o,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Afternoon
+106,2/2/2017,140,3/27/2017 13:00,30,F,Dr Alaf Khan,Dentist,Extraction,1000,1000,NA, Dr Ammad ,1000,Haris,NA,Afternoon
+107,2/2/2017,100,3/27/2017 13:25,23,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Afternoon
+108,2/3/2017,133,3/27/2017 16:45,27,F,Dr Alaf Khan,Dentist,X Ray,500,500,NA, Dr Ammad ,500,Haris,NA,Evening
+109,2/3/2017,44,3/27/2017 20:00,6,M,Dr Ali,Child Specialist,Consultation,1000,1000,NA, Dr Ammad ,300,Haris,NA,NA
+110,2/4/2017,35,3/27/2017 16:00,2,F,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Evening
+111,2/4/2017,150,3/27/2017 16:00,30,M,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Evening
+112,2/6/2017,118,3/27/2017 19:30,32,F,Dr Kinza Alam,Gynae,Consultation+USG,1500,1500,NA, Dr Ammad ,800,Haris,NA,NA
+113,2/6/2017,114,3/27/2017 19:45,25,F,Dr Kinza Alam,Gynae,Consultation,1000,1000,NA, Dr Ammad ,300,Haris,NA,NA
+114,2/6/2017,49,3/27/2017 13:30,80,M,Dr Ali,Child Specialist,Consultation+Retain,3500,3500,NA, Dr Ammad ,2000,Haris,NA,Afternoon
+115,2/6/2017,126,3/27/2017 13:30,70,F,Dr Alaf Khan,Dentist,Scalling,3000,3000,NA, Dr Ammad ,3000,Haris,NA,Afternoon
+116,2/6/2017,141,3/27/2017 16:00,20,M,Dr Riffat Naheed,Psychotherapist,Consultation,2000,2000,NA, Dr Ammad ,600,Haris,NA,Evening
+117,2/6/2017,17,3/27/2017 18:15,23,M,Dr Ammad,M/o,Consultation,200,200,NA, Dr Ammad ,200,Haris,NA,Evening
+118,2/7/2017,12,3/27/2017 12:00,60,F,Dr Alaf Khan,Dentist,22 Unit Bridge,44000,30000,14000, Dr Ammad ,30000,Haris,2/14/2017,Afternoon
+119,2/7/2017,60,3/27/2017 13:10,50,M,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,Afternoon
+120,2/7/2017,140,3/27/2017 14:15,30,F,Dr Alaf Khan,Dentist,4 Unit Bridge,3000,3000,NA, Dr Ammad ,3000,Haris,NA,Afternoon
+121,2/7/2017,41,3/27/2017 18:00,13,M,Dr Qurat ul Ain,Dentist,X Ray,500,500,NA, Dr Ammad ,500,Haris,NA,Evening
+122,2/7/2017,87,3/27/2017 20:00,30,F,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,NA
+123,2/8/2017,132,3/27/2017 10:13,13,M,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,2/17/2017,Morning
+124,2/8/2017,132,3/27/2017 12:00,13,M,Dr Alaf Khan,Dentist,R.C.T,3500,3500,NA, Dr Ammad ,3500,Haris,NA,Afternoon
+125,2/8/2017,13,3/27/2017 12:00,39,F,Dr Saad,Orthopedic,Consultation,1000,1000,NA, Dr Ammad ,300,Haris,NA,Afternoon
+126,2/8/2017,109,3/27/2017 14:40,28,F,Dr Alaf Khan,Dentist,R.C.T,2000,2000,NA, Dr Ammad ,2000,Haris,NA,Afternoon
+127,2/8/2017,109,3/27/2017 14:40,28,F,Dr Alaf Khan,Dentist,Crown,3000,NA,3000, Dr Ammad ,NA,Haris,2/16/2017,Afternoon
+128,2/8/2017,153,3/27/2017 14:40,17,F,Dr Alaf Khan,Dentist,Orthodontics,110000,20000,90000, Dr Ammad ,20000,Haris,2/16/2017,Afternoon
+129,2/8/2017,43,3/27/2017 10:00,27,M,Dr Alaf Khan,Dentist,Consultation+X Ray,800,800,NA, Dr Ammad ,800,Haris,2/9/2017,Morning
+130,2/10/2017,5,3/27/2017 9:30,57,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA, Dr Ammad ,300,Haris,NA,Morning
+131,2/10/2017,14,3/27/2017 18:30,6,M,Nursing Staff,,X Ray,300,300,NA, Dr Ammad ,300,Haris,NA,Evening
+132,2/10/2017,123,3/27/2017 19:00,18,M,Dr Qurat ul Ain,Dentist,Filling,1500,1500,NA, Dr Ammad ,1500,Haris,NA,NA
+133,2/11/2017,137,3/27/2017 12:00,25,M,Dr Ali,Child Specialist,Consultation,1000,1000,NA, Mrs Shamsa ,300,Mona,NA,Afternoon
+134,2/11/2017,91,3/27/2017 16:20,50,F,Dr Qurat ul Ain,Dentist,Scalling,2500,2500,NA, Mrs Shamsa ,2500,Mona,NA,Evening
+135,2/11/2017,23,3/27/2017 17:57,0,F,Dr Qurat ul Ain,Dentist,Consultation,1000,1000,NA, Mrs Shamsa ,1000,Mona,NA,Evening
+136,2/11/2017,154,3/27/2017 18:15,19,F,Dr Qurat ul Ain,Dentist,Scalling,2000,2000,NA, Mrs Shamsa ,2000,Mona,NA,Evening
+137,2/12/2017,112,3/27/2017 19:15,39,M,Dr Saad,Orthopedic,Operation,35000,35000,NA, Mrs Shamsa ,35000,Haris,NA,NA
+138,2/12/2017,81,3/27/2017 12:00,6,F,Dr Alaf Khan,Dentist,Consultation+X Ray,700,700,NA, Mrs Shamsa ,700,Mona,NA,Afternoon
+139,2/13/2017,15,3/27/2017 11:20,40,M,Dr Waqar Azeem,Radiologist,USG Abdomen,1000,1000,NA, Dr Ammad ,300,Haris,NA,Morning
+140,2/13/2017,112,3/27/2017 15:40,39,M,Dr Saad,Orthopedic,Operation,15000,15000,NA, Dr Ammad ,15000,Haris,NA,Afternoon
+141,2/13/2017,9,3/27/2017 19:00,20,F,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Haris,NA,NA
+142,2/13/2017,2,NA,0,NA,Dr Ali,Child Specialist,Consultation,1500,1500,NA, Dr Ammad ,500,Haris,NA,NA
+143,2/14/2017,113,3/27/2017 14:30,14,M,Dr Saad Riaz,Orthopedic,Pop,3700,3700,NA, Dr Ammad ,1700,Haris,NA,Afternoon
+144,2/14/2017,4,3/27/2017 15:00,0,M,Nursing Staff,,Er Retain,300,300,NA, Dr Ammad ,300,Haris,NA,Afternoon
+145,2/14/2017,19,3/27/2017 19:02,0.5,F,Dr Waqar Azeem,Radiologist,USG,2000,2000,NA, Dr Ammad ,1300,Haris,NA,NA
+146,2/15/2017,118,3/27/2017 11:40,24,F,Dr Alaf Khan,Dentist,X Ray,400,400,NA, Mrs Shamsa ,400,Mona,NA,Morning
+147,2/15/2017,94,3/27/2017 16:45,3,M,Dr Ali,Child Specialist,Consultation + Nebulize,1150,1150,NA," 150 Mrs Shamsa, 300 Dr Ammad ",450,Haris,NA,Evening
+148,2/15/2017,64,3/27/2017 18:15,23,M,Dr Ammad,M/o,Consultation,200,200,NA, Dr Ammad ,200,Haris,NA,Evening
+149,2/17/2017,29,3/27/2017 16:10,29,M,Dr Alaf Khan,Dentist,X Ray,200,200,NA, Dr Ammad ,200,Haris,NA,Evening
+150,2/17/2017,66,3/27/2017 17:30,55,M,Dr Alaf Khan,Dentist,Extraction,1000,1000,NA, Dr Ammad ,1000,Haris,NA,Evening
+151,2/17/2017,107,3/27/2017 18:30,30,F,Nursing Staff,,X Ray,1000,1000,NA, Dr Ammad ,1000,Haris,NA,Evening
+152,2/18/2017,108,3/27/2017 18:20,0,M,Dr Ali,Child Specialist,Consultation,3000,3000,NA, Dr Ammad ,1600,Saima,NA,Evening
+153,2/18/2017,30,3/27/2017 18:10,30,F,Dr Qurat ul Ain,Dentist,Extraction,1500,1500,NA, Dr Ammad ,1500,Mona,NA,Evening
+154,2/18/2017,94,3/27/2017 11:30,3,M,Nursing Staff,,Injection,300,300,NA, Dr Ammad ,300,Saima,NA,Morning
+155,2/19/2017,55,3/27/2017 14:45,0,M,Dr Qurat ul Ain,Dentist,X Ray,300,300,NA, Dr Ammad ,300,Saima,NA,Afternoon
+156,2/20/2017,132,NA,13,M,Dr Alaf Khan,Dentist,Crown,5000,5000,NA, Dr Ammad ,5000,,2/24/2017,NA
+157,2/20/2017,68,3/27/2017 13:25,10,M,Dr Shireen,M/o,Stiches,700,700,NA, Dr Ammad ,700,Saima,NA,Afternoon
+158,2/20/2017,80,3/27/2017 14:00,30,F,Dr Shireen,M/o,Consultation,1200,1200,NA, Dr Ammad ,1200,Saima,NA,Afternoon
+159,2/20/2017,99,3/27/2017 19:00,45,F,Dr Saima Shams,Radiologist,USG,1500,1500,NA, Dr Ammad ,900,Mona,NA,NA
+160,2/20/2017,94,3/27/2017 22:15,3,M,Nursing Staff,,Injection,300,300,NA, Dr Ammad ,300,Ashfaq,NA,NA
+161,2/21/2017,151,3/27/2017 13:00,38,M,Dr Alaf Khan,Dentist,R.C.T+Scalling+Crown,5000,5000,NA, Dr Ammad ,5000,Saima,2/28/2017,Afternoon
+162,2/21/2017,53,3/27/2017 18:00,20,F,Dr Waqar Azeem,Radiologist,USG,1000,1000,NA, Dr Ammad ,400,Mona,NA,Evening
+163,2/21/2017,11,3/27/2017 19:11,2,F,Dr Ali,Child Specialist,Consultation,1000,1000,NA, Dr Ammad ,300,Saima,NA,NA
+164,2/21/2017,94,3/27/2017 22:10,3,M,Nursing Staff,,Injection,300,300,NA, Dr Ammad ,300,Sub KB,NA,NA
+165,2/21/2017,64,NA,0,NA,Nursing Staff,,Medicine,100,100,NA,,100,Saima,NA,NA
+166,2/22/2017,100,3/27/2017 15:00,23,F,Dr Alaf Khan,Dentist,Orthodontics,120000,30000,90000, Dr Ammad ,30000,Mona,NA,Afternoon
+167,2/22/2017,16,3/27/2017 16:30,26,M,Dr Mumtaz,General Surgeon,Consultation,1000,1000,NA, Dr Ammad ,500,Mona,NA,Evening
+168,2/22/2017,6,3/27/2017 17:00,35,M,Dr Waqar Azeem,Radiologist,USG,1000,1000,NA, Dr Ammad ,400,Mona,NA,Evening
+169,2/23/2017,33,3/27/2017 13:55,22,M,Dr Alaf Khan,Dentist,R.C.T,3000,3000,NA, Dr Ammad ,3000,Saima,NA,Afternoon
+170,2/23/2017,89,3/27/2017 13:50,65,F,Dr Saad Riaz,Orthopedic,Consultation,1000,1000,NA, Dr Ammad ,500,Saima,NA,Afternoon
+171,2/23/2017,13,3/27/2017 14:00,45,F,Dr Saad Riaz,Orthopedic,Consultation,1000,1000,NA, Dr Ammad ,300,Saima,NA,Afternoon
+172,2/23/2017,47,3/27/2017 15:00,21,F,Dr Riffat Naheed,Psychotherapist,Consultation,1500,1500,NA, Dr Ammad ,700,Saima,NA,Afternoon
+173,2/24/2017,80,3/27/2017 21:30,30,F,Dr Mehwish,Gynae,Consultation,1000,1000,NA, Dr Ammad ,500,Saima,NA,NA
+174,2/25/2017,128,3/27/2017 15:45,64,F,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,Afternoon
+175,2/25/2017,93,3/27/2017 16:00,40,F,Dr Ali,Child Specialist,,3000,3000,NA, Dr Ammad ,1600,Saima,NA,Evening
+176,2/27/2017,143,3/27/2017 11:30,52,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,Morning
+177,2/27/2017,56,3/27/2017 12:20,55,F,Dr Alaf Khan,Dentist,Extraction,600,600,NA, Dr Ammad ,600,Saima,NA,Afternoon
+178,2/27/2017,96,NA,54,M,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,NA
+179,2/28/2017,65,3/27/2017 22:30,30,M,Nursing Staff,,BSR,50,50,NA, Dr Ammad ,50,Haris,NA,NA
+180,2/28/2017,96,3/27/2017 12:40,53,M,Dr Alaf Khan,Dentist,8 Unit Bridge+2 R.C.T,30000,8000,22000, Dr Ammad ,8000,Haris,NA,Afternoon
+181,2/28/2017,90,NA,0,F,Dr Alaf Khan,Dental,Consultation,1000,1000,NA, Dr Ammad ,1000,Saima,NA,NA
+182,2/28/2017,151,3/27/2017 15:00,38,F,Dr Alaf Khan,Dentist,R.C.T+Scalling+Crown,4500,4500,NA, Dr Ammad ,4500,Haris,NA,Afternoon
+183,2/28/2017,139,3/27/2017 20:00,30,M,Nursing Staff,,X Ray,500,500,NA, Dr Ammad ,500,Saima,NA,NA
+184,3/1/2017,107,3/27/2017 17:00,17,F,Dr Qurat ul Ain,Dentist,Extraction,1500,1500,NA, Dr Ammad ,1500,Saima,NA,Evening
+185,3/1/2017,28,3/27/2017 18:00,3,F,Dr Qurat ul Ain,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,Evening
+186,3/1/2017,46,NA,17,M,Nursing Staff,,Dressing,500,500,NA, Dr Ammad ,200,Saima,NA,NA
+187,3/1/2017,25,3/27/2017 19:00,0,F,Dr Kinza Alam,Gynae,Consultation,1500,1500,NA, Dr Ammad ,500,Saima,NA,NA
+188,3/1/2017,24,3/27/2017 19:10,0,M,Dr Ammad,M/o,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,NA
+189,3/2/2017,140,3/27/2017 12:48,30,F,Dr Alaf Khan,Dentist,4 Unit Bridge,8000,8000,NA, Dr Ammad ,8000,Saima,NA,Afternoon
+190,3/2/2017,46,3/27/2017 15:00,17,M,Nursing Staff,,Injection,50,50,NA, Dr Ammad ,50,Saima,NA,Afternoon
+191,3/2/2017,114,3/27/2017 19:05,26,F,Dr Kinza Alam,Gynae,Consultation,1000,1000,NA, Dr Ammad ,300,Saima,NA,NA
+192,3/2/2017,3,NA,0,NA,Nursing Staff,,Dressing,100,100,NA, Dr Ammad ,100,Saima,NA,NA
+193,3/3/2017,138,3/27/2017 11:20,45,F,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,Morning
+194,3/3/2017,107,3/27/2017 12:30,17,F,Dr Alaf Khan,Dentist,R.C.T+Crown,8000,8000,NA, Dr Ammad ,8000,Saima,3/9/2017,Afternoon
+195,3/3/2017,34,3/27/2017 13:30,22,M,Dr Alaf Khan,Dentist,Crown,2000,2000,NA, Dr Ammad ,2000,Saima,3/8/2017,Afternoon
+196,3/3/2017,133,3/27/2017 16:10,30,F,Dr Ali,Child Specialist,Consultation,1000,1000,NA, Dr Ammad ,300,Saima,NA,Evening
+197,3/3/2017,46,3/27/2017 17:45,17,M,Nursing Staff,,Dressing,300,300,NA, Dr Ammad ,300,Saima,NA,Evening
+198,3/3/2017,74,3/27/2017 14:40,38,M,Dr Waqar Azeem,Radiologist,USG KUB,1000,1000,NA, Dr Ammad ,300,Sub KB,NA,Afternoon
+199,3/5/2017,46,NA,17,M,Nursing Staff,,Dressing,300,300,NA, Dr Ammad ,200,Saima,NA,NA
+200,3/6/2017,83,3/27/2017 13:20,34,M,Dr Alaf Khan,Dentist,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,Afternoon
+201,3/6/2017,61,3/27/2017 17:30,28,F,Dr Qurat ul Ain,Dentist,Consultation+X Ray,950,950,NA, Dr Ammad ,950,Haris,NA,Evening
+202,3/6/2017,122,3/27/2017 19:00,78,M,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Saima,NA,NA
+203,3/7/2017,95,NA,56,M,Dr Alaf Khan,Dentist,X Ray,300,300,NA, Dr Ammad ,300,Saima,NA,NA
+204,3/7/2017,69,3/27/2017 15:00,53,M,Dr Alaf Khan,Dentist,,15000,15000,NA, Dr Ammad ,15000,Mona,NA,Afternoon
+205,3/7/2017,146,NA,21,M,Dr Ammad,M/o,Consultation,500,500,NA, Dr Ammad ,500,Saima,NA,NA
+206,3/7/2017,46,3/27/2017 19:40,17,M,Nursing Staff,,Dressing,200,200,NA, Dr Ammad ,200,Saima,NA,NA
+207,3/7/2017,32,3/27/2017 14:00,0,F,Nursing Staff,,Coupety,300,300,NA, Dr Ammad ,300,Saima,NA,Afternoon
+208,3/7/2017,122,3/27/2017 21:35,78,M,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Sub KB,NA,NA
+209,3/8/2017,148,3/27/2017 20:30,3,F,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Ashfaq,NA,NA
+210,3/8/2017,122,3/27/2017 22:00,76,M,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Ashfaq,NA,NA
+211,3/8/2017,10,3/27/2017 16:45,9,F,Dr Qurat ul Ain,Dentist,Consultation+x Ray,650,650,NA, Dr Ammad ,650,Saima,NA,Evening
+212,3/8/2017,76,3/27/2017 18:55,32,M,Dr Paul,Dermatologist,Consultation,1500,1000,500, Dr Ammad ,300,Mona,NA,Evening
+213,3/8/2017,1,3/27/2017 12:00,0,F,Nursing Staff,,Injection,150,150,NA, Dr Ammad ,150,Mona,NA,Afternoon
+214,3/8/2017,25,3/27/2017 19:30,0,F,Dr Kinza Alam,Gynae,Consultation,1500,1500,NA, Dr Ammad ,500,Mona,NA,NA
+215,3/9/2017,77,3/27/2017 12:00,24,M,Dr Alaf Khan,Dentist,R.C.T,5000,2000,3000, Dr Ammad ,2000,Haris,3/16/2017,Afternoon
+216,3/9/2017,121,3/27/2017 9:00,3,F,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Mona,NA,Morning
+217,3/9/2017,122,NA,76,M,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Mona,NA,NA
+218,3/9/2017,1,NA,0,NA,Nursing Staff,,Cancelled,0,NA,NA, Dr Ammad ,NA,Saima,NA,NA
+219,3/9/2017,18,3/27/2017 15:30,39,M,Dr Alaf Khan,Dentist,Scalling+Polishing,4000,4000,NA, Dr Ammad ,4000,Saima,NA,Afternoon
+220,3/9/2017,110,3/27/2017 18:00,30,M,Dr Qurat ul Ain,Dentist,Consultation,200,200,NA, Dr Ammad ,200,Saima,NA,Evening
+221,3/10/2017,122,3/27/2017 10:20,76,M,Nursing Staff,,Injection,100,100,NA, Dr Ammad ,100,Zaheer,NA,Morning
+222,3/10/2017,105,3/27/2017 23:20,45,F,Dr Shireen,M/o,Consultation,800,800,NA, Dr Ammad ,800,Mona,NA,NA
