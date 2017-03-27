@@ -95,3 +95,8 @@ mydf %>%
   filter(Sex != "") %>%
   group_by(Sex) %>%
   summarize(median= median(Age, na.rm=TRUE))
+
+#Question 14
+mydf$`Amount Balance` <- gsub("-", "", mydf$`Amount Balance`)
+mydf$`Amount Balance`<- as.integer(as.character(gsub(",", "", mydf$`Amount Balance`)))
+mydf %>% summarise(Total=sum(`Amount Balance`,na.rm=TRUE))
