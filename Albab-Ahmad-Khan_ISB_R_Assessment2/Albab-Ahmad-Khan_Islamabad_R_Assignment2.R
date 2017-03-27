@@ -165,3 +165,4 @@ df %>%
   filter(Procedure == 'X Ray'|  Procedure == 'Scalling' ) %>%
   summarise(s=sum(TotalCharges, na.rm= TRUE))
 
+write.csv(df, file = "CleanDataset.csv")
