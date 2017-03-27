@@ -15,3 +15,7 @@ datahosp <- separate(datahosp, Date, c('Day', 'Date'), extra = "merge", sep = ",
 
 day_of_week_most_visits <- slice(count(datahosp, Day), which.max(n))
 day_of_week_most_visits
+
+# Q3.What is the average age of patients? 
+avg_age_patient <- summarize(datahosp, avg_age = mean(as.integer(as.character(datahosp$Age)), na.rm = TRUE))
+avg_age_patient
