@@ -149,3 +149,12 @@ df %>%
 df$Age <- as.numeric(df$Age)
 df$TotalCharges <- as.numeric(df$TotalCharges)
 cor.test(x= df$Age, y= df$TotalCharges)
+
+#Question 17
+# Which Age group had highest number of visits?
+df %>%
+  group_by(Age) %>%
+  filter(Age != "NA") %>%
+  summarise(n=n()) %>%
+  slice(which.max(n))
+
