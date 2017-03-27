@@ -114,3 +114,11 @@ datahosp$`Amount Balance` <- gsub(x = datahosp$`Amount Balance`, pattern = "-", 
 datahosp$`Amount Balance` <- as.numeric(as.character(gsub(x = datahosp$`Amount Balance`, pattern = ",", replacement = "")))
 total_amount <- sum(as.integer(as.character(datahosp$`Amount Balance`)), na.rm = TRUE)
 total_amount
+
+# Q 15. How much money was made by Procedure Type "Consultation"? 
+earning_consultation <- datahosp %>%
+  group_by(Procedure) %>%
+  filter(Procedure == "Consultation") %>%
+  summarise(sum(`Total Charges`, na.rm = TRUE))
+
+earning_consultation
