@@ -68,3 +68,13 @@ mmed
 "14. What is the total amount in balance?"
 g <- hospitaldata$`Amount  Balance` <- as.numeric(gsub('[,]', '', hospitaldata$`Amount  Balance`))
 sum(g, na.rm = T)
+
+"16. Is there a relation between Age and Total Charges paid?"
+d <-as.numeric(hospitaldata$Age)
+f <-as.numeric(hospitaldata$`Total  Charges`)
+cor.test(x=d,y=f)
+
+"15. How much money was made by Procedure Type "Consultation"?
+16. Is there a relation between Age and Total Charges paid?
+17. Which Age group had highest number of visits?
+18. What is the total cost earned by Procedure Type X Ray and Scalling together?"
