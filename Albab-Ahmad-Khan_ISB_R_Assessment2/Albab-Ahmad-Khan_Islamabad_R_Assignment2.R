@@ -104,3 +104,11 @@ check(1)
     summarise(n=n()) %>% 
     filter(n>1) %>% 
     count()
+
+# Question 11.
+# Give us the id of repeated visitors.
+x <- df %>%
+  group_by(id)  %>%  
+  summarise(n=n()) %>% 
+  filter(n>1) 
+  x$id
