@@ -115,3 +115,8 @@ mydf %>%
   filter(Age != 'NA') %>%
   summarise(Freq =n()) %>%
   slice(which.max(Freq))
+
+#Question 18
+mydf %>% 
+  filter(Procedure == 'X Ray' | Procedure == 'Scalling') %>%
+  summarise(Total_COST = sum(`Total Charges`,na.rm=TRUE))
