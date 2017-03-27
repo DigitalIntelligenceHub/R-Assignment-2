@@ -73,3 +73,26 @@ df %>%
     group_by(hour(fulltime)) %>% 
     summarise(cnt = n()) %>% 
     slice(which.max(cnt)) 
+
+#Question 9. 
+# Create a bracket of time by Morning, Afternoon, Evening, Night 
+# (6am - 12pm - Morning, 12 pm- 4 pm, Afternoon, 4 pm- 7pm, Evening, 7pm - 6 am, Night).
+  gsub(x= df$Time, pattern = "-", replacement  = "")
+  filter(df$Time != "") %>%
+  filter(is.na(df$Time)) %>%
+  fulltime <- as.POSIXct(parse_date_time(df$Time, "%H:%M%p"))
+  a <- hour(fulltime)
+  
+  check <- function()
+  {
+    if ( findInterval(a, c(6:12))){ 
+      print("Morning")
+    }else if ( findInterval(a, c(12:16))) {
+      print ("Afternoon")
+    } else if ( findInterval(a, c(16:19))) {
+      print("Evening")
+    } else 
+      print("Night")
+  }
+check(24)
+check(1)
