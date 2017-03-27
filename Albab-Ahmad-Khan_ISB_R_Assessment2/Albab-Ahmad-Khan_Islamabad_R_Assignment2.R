@@ -136,3 +136,10 @@ df$AmountBalance <- gsub(x= df$AmountBalance, pattern = "-", replacement = "")
 df$AmountBalance <-  gsub(x= df$AmountBalance, pattern = ",", replacement = "" )
 df$AmountBalance <- as.numeric(df$AmountBalance)
 sum(df$AmountBalance, na.rm=TRUE)
+
+#Question 15
+#How much money was made by Procedure Type "Consultation"?
+df$TotalCharges <- as.numeric(df$TotalCharges)
+df %>%
+    filter(Procedure == "Consultation") %>%
+    summarise(sum=sum(TotalCharges, na.rm = TRUE ))
