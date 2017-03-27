@@ -49,3 +49,8 @@ mydf %>%
   summarise(Sum = sum(`Total Charges`, na.rm=TRUE)) %>%
   slice(which.max(Sum))
 
+# 7. Which procedure type earns more money?
+mydf %>%
+  group_by(Procedure) %>%
+  summarise(Sum = sum(`Total Charges`, na.rm=TRUE)) %>%
+  slice(which.max(Sum))
