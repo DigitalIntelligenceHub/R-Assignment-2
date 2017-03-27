@@ -20,9 +20,6 @@ hospitaldata <- hospitaldata%>%
 
 print(mean(as.numeric(hospitaldata$Age),na.rm = TRUE))
 
-
-
-
 ##Answer 4
 hospitaldata <- hospitaldata %>%
   mutate(Age = as.numeric(Age)) 
@@ -37,11 +34,20 @@ children_data <- hospitaldata %>%
 # Answer 5
 gen_proc<-hospitaldata %>%
   mutate(Sex = ifelse(Sex == 'M' | Sex =='m', 'M',ifelse(Sex == 'f' | Sex =='F','F',NA))) %>%
-  filter(!is.na(Sex), !is.na(Procedure)) %>%
-  select(Sex, Procedure) %>%
+  filter(!is.na(Sex), !is.na(Procedure), Sex == 'F') %>%
+  select(Procedure) %>%
   count()
 gen_proc_1 <- max(gen_proc$freq)
-select(filter(gen_proc,gen_proc$freq == gen_proc_1),Sex,Procedure,freq)
+select(filter(gen_proc,gen_proc$freq == gen_proc_1),Procedure,freq)
+
+gen_proc<-hospitaldata %>%
+  mutate(Sex = ifelse(Sex == 'M' | Sex =='m', 'M',ifelse(Sex == 'f' | Sex =='F','F',NA))) %>%
+  filter(!is.na(Sex), !is.na(Procedure), Sex == 'M') %>%
+  select(Procedure) %>%
+  count()
+gen_proc_1 <- max(gen_proc$freq)
+select(filter(gen_proc,gen_proc$freq == gen_proc_1),Procedure,freq)
+
 
 # Answer 6
 doctors_earnings <- hospitaldata %>%
@@ -116,6 +122,12 @@ Consultation_amount <-hospitaldata %>%
   summarise(sum(AmountReceived)) %>%
   print
 
+# Answer 15
+Consultation_amount <-hospitaldata %>%
+  filter(!is.na(AmountReceived), Procedure=='Consultation') %>%
+  summarise(sum(AmountReceived)) %>%
+  print
+  
 # Answer 16
 Age_n_Charges_Relation <- hospitaldata %>%
   filter(!is.na(Age), !is.na(TotalCharges), !grepl("Cancelled",TotalCharges)) %>%
