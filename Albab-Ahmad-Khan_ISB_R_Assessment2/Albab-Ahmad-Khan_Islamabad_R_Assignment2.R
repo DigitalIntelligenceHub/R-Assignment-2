@@ -96,3 +96,11 @@ df %>%
   }
 check(24)
 check(1)
+
+# Question 10.
+#  How many patients are repeated visitors?
+  df %>%
+    group_by(id)  %>%  
+    summarise(n=n()) %>% 
+    filter(n>1) %>% 
+    count()
