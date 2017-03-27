@@ -10,3 +10,10 @@ View(df)
 #names(df) <- gsub(x= "\\.", " ", names(df), fixed = TRUE)
 names(df) <- gsub(x= names(df), pattern = "\\.", replace = "")
 names(df)
+
+# Question 2
+# Which day of the week is expected to have most visits?
+xx <- tbl_df(df)
+df <- separate(df, Date, into = c("Day", "Date"), sep = ",", extra = "merge")
+new <- df %>% count(Day) %>%  slice(which.max(n))
+new
