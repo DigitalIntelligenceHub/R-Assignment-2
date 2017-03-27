@@ -30,3 +30,14 @@ mean(df1, na.rm = TRUE)
 # How many children were entertained? (Make a Bracket of Age from 1-12)
 four <- filter(df, df1< 12)
 count(four, na.rm = TRUE)
+
+# Question 5
+# Which gender type had what kind of procedure in abundance? i.e. Female visit mostly because of Gynae Problem
+df$Sex <- gsub("-", "", df$Sex)
+df$Sex <- as.character(Map({function (a) toupper(a)}, df$Sex))
+df %>%
+  filter(Sex != "") %>% 
+  group_by(Sex, Specialty)  %>%  
+  summarise(n=n()) %>%  
+  slice(which.max(n)) %>%  
+  arrange(desc(n))
