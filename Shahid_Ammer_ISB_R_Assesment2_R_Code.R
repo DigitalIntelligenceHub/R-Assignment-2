@@ -18,3 +18,8 @@ names(mydf)
 mydf <- mydf %>% separate(Date, c('Day', 'Date'), sep="," , extra="merge")
 most_expected_day <- mydf %>% count(Day) %>% slice(which.max(n))
 most_expected_day
+
+# 3. What is the average age of patients?
+#Question 3
+mydf$Age <- as.integer(as.character(mydf$Age))
+mydf %>% summarize(avg_age = median(mydf$Age, na.rm=TRUE))
