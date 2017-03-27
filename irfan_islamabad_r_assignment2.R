@@ -108,3 +108,9 @@ median_age_female_male <- datahosp%>%
   summarise(Median=median(Age, na.rm =TRUE))
 
 median_age_female_male
+
+# Q 14. What is the total amount in balance
+datahosp$`Amount Balance` <- gsub(x = datahosp$`Amount Balance`, pattern = "-", replacement = "")
+datahosp$`Amount Balance` <- as.numeric(as.character(gsub(x = datahosp$`Amount Balance`, pattern = ",", replacement = "")))
+total_amount <- sum(as.integer(as.character(datahosp$`Amount Balance`)), na.rm = TRUE)
+total_amount
