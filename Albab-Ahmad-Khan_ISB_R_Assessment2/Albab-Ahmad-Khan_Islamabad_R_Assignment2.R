@@ -61,3 +61,15 @@ df %>%
   summarise(sum= sum(TotalCharges, na.rm = TRUE)) %>%  
   slice(which.max(sum)) %>%  
   arrange(desc(sum))
+
+# Question 8
+# Which time of the day has highest frequency of visits by hour?
+  gsub(x= df$Time, pattern = "-", replacement  = "")
+  #filter(df$Time != "") %>%
+  fulltime <- as.POSIXct(parse_date_time(df$Time, "%H:%M%p"))
+  hour(fulltime)
+  
+  df %>% 
+    group_by(hour(fulltime)) %>% 
+    summarise(cnt = n()) %>% 
+    slice(which.max(cnt)) 
