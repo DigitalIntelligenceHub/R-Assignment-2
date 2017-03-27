@@ -54,3 +54,11 @@ mydf %>%
   group_by(Procedure) %>%
   summarise(Sum = sum(`Total Charges`, na.rm=TRUE)) %>%
   slice(which.max(Sum))
+
+#Question 8
+mydf$Time <- gsub(x=mydf$Time, pattern = "-", replacement = "")
+Fulltime <- as.POSIXlt(parse_date_time(mydf$Time, "%H:%M%p"))
+mydf %>% 
+  group_by(hour(Fulltime))  %>% 
+  summarise(Freq=n()) %>% 
+  slice(which.max(Freq)) 
