@@ -60,21 +60,25 @@ select(group_by(hospitaldata, id,  Specialty))%>%
      View()
 
 "13. What is the median age for Females and Males?"
-fmed <- subset(hospitaldata, Sex=='F' , select = Age)
-fmed
-mmed <- subset(hospitaldata, Sex=='M' , select = Age)
-mmed
+gsub("-", "NA" ,hospitaldata$Age)
+toupper(hospitaldata$Sex)
+fmed <- subset(hospitaldata, Sex=='F' , select = as.numeric(Age))
+median(fmed$Age, na.rm =T)
+mmed <- subset(hospitaldata, Sex=='M' , select = as.numeric(Age))
+median(mmed$Age, na.rm= T)
 
 "14. What is the total amount in balance?"
 g <- hospitaldata$`Amount  Balance` <- as.numeric(gsub('[,]', '', hospitaldata$`Amount  Balance`))
 sum(g, na.rm = T)
 
+"15. How much money was made by Procedure Type "Consultation"?"
+proct <- subset(hospitaldata, Procedure == "Consultation")
+sum(proct$`Total  Charges`, na.rm= T)
+
 "16. Is there a relation between Age and Total Charges paid?"
 d <-as.numeric(hospitaldata$Age)
 f <-as.numeric(hospitaldata$`Total  Charges`)
 cor.test(x=d,y=f)
-
-"15. How much money was made by Procedure Type "Consultation"?
-16. Is there a relation between Age and Total Charges paid?
-17. Which Age group had highest number of visits?
-18. What is the total cost earned by Procedure Type X Ray and Scalling together?"
+"17. Which Age group had highest number of visits?
+18. What is the total cost earned by Procedure Type X Ray and Scalling together?
+"
