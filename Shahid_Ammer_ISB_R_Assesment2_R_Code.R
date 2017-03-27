@@ -108,3 +108,10 @@ mydf %>%
 
 #Question 16
 cor(x=mydf$Age, y=mydf$`Total Charges`, use="complete.obs") 
+
+#Question 17
+mydf %>% 
+  group_by(Age) %>%
+  filter(Age != 'NA') %>%
+  summarise(Freq =n()) %>%
+  slice(which.max(Freq))
