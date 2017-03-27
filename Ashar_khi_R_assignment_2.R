@@ -112,3 +112,4 @@ hist(mydata$Age)
 
 #Q18 What is the total cost earned by Procedure Type X Ray and Scalling together?
 print(sum(mydata$TotalCharges[mydata$Procedure=="X Ray" | mydata$Procedure=="Scalling"]))
+write.csv(mydata,file="C:/Users/ashar.burney/Documents/GitHub/R-Assignment-2/updated_hospital_dataset.csv")
