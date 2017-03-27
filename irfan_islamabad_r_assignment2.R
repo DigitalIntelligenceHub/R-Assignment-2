@@ -61,3 +61,13 @@ highest_earning_procedure <- datahosp %>%
 
 highest_earning_procedure[order(highest_earning_procedure$Total,decreasing=T)[1],]
 
+# Q8. Which time of the day has highest frequency of visits by hour?
+datahosp$Time <- gsub(x = datahosp$Time, pattern = "-", replacement = "")
+datahosp$Time <- parse_date_time(datahosp$Time,"%H:%M%p")
+datahosp$Time <- format(datahosp$Time, "%H:%M:%S")
+datahosp <- separate(datahosp, Time, c('Hour', 'Minute', 'Seconds'),  sep = ":")
+higest_freq_vists_by_hour <- slice(count(datahosp, Hour), which.max(n))
+
+higest_freq_vists_by_hour
+
+
