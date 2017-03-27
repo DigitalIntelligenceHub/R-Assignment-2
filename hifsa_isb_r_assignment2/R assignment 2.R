@@ -41,7 +41,11 @@ hospitaldata$`Amount Received By`[which.max(a)] giving same results "
 max(a, na.rm = T, filter = c(hospitaldata$Procedure))
 
 "8. Which time of the day has highest frequency of visits by hour?"
-
+df2 <- hospitaldata$Time 
+gsub("-", "NA" ,df2)
+d<-hour(hm(format( s <- strptime(df2, "%I:%M %p" ), format = "%H:%M")))
+count(d)%>%
+  View()
 "9. Create a bracket of time by 
 Morning, Afternoon, Evening, Night 
 (6am - 12pm - Morning, 12 pm- 4 pm, 
