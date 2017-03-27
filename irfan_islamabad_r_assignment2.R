@@ -53,3 +53,11 @@ highest_paid_doc <- datahosp %>%
 
 highest_paid_doc[order(highest_paid_doc$Total,decreasing=T)[1],]
 
+# Q7. Which procedure type earns more money
+
+highest_earning_procedure <- datahosp %>% 
+  group_by(Procedure) %>%
+  summarize(Total = sum(`Total Charges`, na.rm = TRUE))
+
+highest_earning_procedure[order(highest_earning_procedure$Total,decreasing=T)[1],]
+
