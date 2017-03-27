@@ -71,3 +71,13 @@ higest_freq_vists_by_hour <- slice(count(datahosp, Hour), which.max(n))
 higest_freq_vists_by_hour
 
 
+# 10. How many patients are repeated visitors?
+
+repeated_visitors <- datahosp %>%
+  group_by(id) %>% 
+  summarize(freq = n()) %>%
+  filter(freq > 1) %>%
+  count()
+
+repeated_visitors
+
