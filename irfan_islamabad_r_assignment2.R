@@ -19,3 +19,13 @@ day_of_week_most_visits
 # Q3.What is the average age of patients? 
 avg_age_patient <- summarize(datahosp, avg_age = mean(as.integer(as.character(datahosp$Age)), na.rm = TRUE))
 avg_age_patient
+
+# Q4. How many children were entertained? (Make a Bracket of Age from 1-12)
+# class(as.datahosp$Age) change the age (factor) to integers
+datahosp$Age <- as.integer(as.character(datahosp$Age))
+number_of_children1 <- sum(datahosp$Age < 12, na.rm = TRUE)
+number_of_children1
+# or using count and filter on age
+number_of_children2 <- count(filter(datahosp, Age < 12))
+number_of_children2
+
