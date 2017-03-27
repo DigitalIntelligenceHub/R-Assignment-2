@@ -1,5 +1,6 @@
-library("dplyr")
-library("lubridate")
+library(dplyr)
+library(lubridate)
+library(readr)
 
 # List all objects in the workspace
 #ls()
@@ -71,6 +72,7 @@ x
 
 # Qus9. Create a bracket of time by Morning, Afternoon, Evening, Night (6am - 12pm - Morning, 12 pm- 4 pm, Afternoon, 4 pm- 7pm, Evening, 7pm - 6 am, Night).
 
+
 # Qus10. How many patients are repeated visitors?
 p_rep_patient_visit <- df %>%
   group_by(id)%>%
@@ -119,11 +121,7 @@ p_consultation_max <- df %>%
 p_consultation_max
 
 # Qus16. Is there a relation between Age and Total Charges paid?
-#dt <- df %>%
-#  filter(!is.na(Age), !is.na(TotalCharges))
-#p_age <- as.numeric(p_age_var)
-#print (dt)
-#cor( dt$TotalCharges,dt$Age)
+
 
 # Qus17. Which Age group had highest number of visits?
 p_max_visit <- df %>%
@@ -142,3 +140,4 @@ p_tot_cost <- df %>%
 p_tot_cost
 
 
+write.csv(df, file='D:/diHub/Assessment2_RandPython_Marked/aliejaz1749_khi_r_assignment2/updated_hospitaldata.csv')
