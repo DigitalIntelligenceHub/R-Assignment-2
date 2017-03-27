@@ -21,6 +21,8 @@ hospitaldata <- hospitaldata%>%
 print(mean(as.numeric(hospitaldata$Age),na.rm = TRUE))
 
 
+
+
 ##Answer 4
 hospitaldata <- hospitaldata %>%
   mutate(Age = as.numeric(Age)) 
