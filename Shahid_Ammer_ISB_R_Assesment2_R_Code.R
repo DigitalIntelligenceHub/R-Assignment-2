@@ -23,3 +23,12 @@ most_expected_day
 #Question 3
 mydf$Age <- as.integer(as.character(mydf$Age))
 mydf %>% summarize(avg_age = median(mydf$Age, na.rm=TRUE))
+
+# 4. How many children were entertained? (Make a Bracket of Age from 1-12)
+# Question 4
+#sum(mydf$Age <= 12, na.rm=TRUE)
+children_entertained <- mydf %>% filter(Age <= 12) %>% count()
+children_entertained
+
+
+
