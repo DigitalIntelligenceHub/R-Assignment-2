@@ -143,3 +143,9 @@ df$TotalCharges <- as.numeric(df$TotalCharges)
 df %>%
     filter(Procedure == "Consultation") %>%
     summarise(sum=sum(TotalCharges, na.rm = TRUE ))
+
+#Question 16
+# Is there a relation between Age and Total Charges paid?
+df$Age <- as.numeric(df$Age)
+df$TotalCharges <- as.numeric(df$TotalCharges)
+cor.test(x= df$Age, y= df$TotalCharges)
