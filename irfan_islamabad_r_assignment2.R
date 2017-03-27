@@ -42,3 +42,14 @@ new <- datahosp %>% group_by(Sex, Specialty) %>%
   slice(which.max(freq))
 
 new[order(new$freq,decreasing=T)[1:2],]
+
+# Q6. Which Doctor is earning highest? 
+#aggregate(as.numeric(datahosp$`Total  Charges`), by=list(Category=datahosp$`Consulting  Doctor`), FUN=sum)
+
+datahosp$`Total Charges` <- as.numeric(as.character(datahosp$`Total Charges`))
+highest_paid_doc <- datahosp %>% 
+  group_by(`Consulting Doctor`) %>%
+  summarize(Total = sum(`Total Charges`, na.rm = TRUE))
+
+highest_paid_doc[order(highest_paid_doc$Total,decreasing=T)[1],]
+
