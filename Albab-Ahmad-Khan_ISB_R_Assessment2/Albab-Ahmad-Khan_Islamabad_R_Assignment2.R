@@ -112,3 +112,12 @@ x <- df %>%
   summarise(n=n()) %>% 
   filter(n>1) 
   x$id
+
+# Question 12
+#  Which patients visited again for the same problem?
+  df %>%
+    group_by(id, Specialty) %>%
+    summarise(n=n()) %>%
+    filter(n>1)
+View(df)
+df$Age <- as.numeric(df$Age)
