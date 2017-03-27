@@ -26,45 +26,45 @@ hos<-
 hos$Sex<-toupper(hos$Sex)
 hos$NextApt <-as.Date(hos$NextApt,"%m/%d/%Y")
 
-#Question 01
+#Question 02
 x<-table(weekdays(hos$Date))
 which.max(x)
 
-#Question 02
+#Question 03
 mean(hos$Age,na.rm = TRUE)
 
-#Question 03
+#Question 04
 rows <-
   hos %>%
   filter(Age>=1,Age<=12) %>%
   as.data.frame()  
 nrow(rows)
 
-#Question 04
+#Question 05
 hos%>%
   count(Sex, Procedure) %>%
   slice(which.max(n))
 
-#Question 05
+#Question 06
 hos%>%
   group_by(ConsultingDoctor) %>%
   summarise(TotalCharges=sum(TotalCharges,na.rm=TRUE)) %>%
   filter(TotalCharges==max(TotalCharges))
 
-#Question 06
+#Question 07
 hos%>%
   group_by(Procedure) %>%
   summarise(TotalCharges=sum(TotalCharges,na.rm=TRUE)) %>%
   filter(TotalCharges==max(TotalCharges))
 
-#Question 07
+#Question 08
 #install.packages("lubridate")
 library(lubridate)
 
 hos$Time <- as.POSIXlt(strptime(hos$Time,"%I:%M%p"))
 which.max(table(hour(hos$Time)))
 
-#Question 08
+#Question 09
 hos<-
   hos%>%
   mutate(TimeBracket=ifelse(hour(Time)>=6 & hour(Time)<=12,"Morning",NA))
@@ -78,28 +78,21 @@ hos<-
   hos%>%
   mutate(TimeBracket=ifelse(hour(Time)>=19 & hour(Time)<=6,"Night",TimeBracket))
 
-#Question 09
-rv<-
-  hos %>%
-  group_by(id) %>% 
-  filter(n()>1)
-nrow(rv)
-
+hos$Time<-as.character(hos$Time)
 #Question 10
-rv$id
+
+hos$id <- as.numeric(hos$id)
+length(table(hos$id)[table(hos$id)>1])
+#Question 10
+names(table(hos$id)[table(hos$id)>1])
 
 #Question 11
-hos%>%
-  group_by(id,Specialty)%>%
-  filter(n()>1)
+
 
 #Question 12
-hos%>%
-  group_by(Sex) %>%
-  summarise(Age=median(Age,na.rm=TRUE))
+
 
 #Question 13
-sum(hos$AmountBalance,na.rm=TRUE)
 
 #Question 14
 hos%>%
@@ -108,4 +101,3 @@ hos%>%
   summarise(SUM=sum(AmountReceived,na.rm=TRUE))
 
 #Question 15
-x<-cor(hos$Age[!is.na(hos$Age)],hos$TotalCharges[!is.na(hos$TotalCharges)])
