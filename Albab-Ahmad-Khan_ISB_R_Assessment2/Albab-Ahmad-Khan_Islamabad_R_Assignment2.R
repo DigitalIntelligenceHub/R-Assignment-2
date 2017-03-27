@@ -158,3 +158,10 @@ df %>%
   summarise(n=n()) %>%
   slice(which.max(n))
 
+
+#Question 18
+#What is the total cost earned by Procedure Type X Ray and Scalling together?
+df %>%
+  filter(Procedure == 'X Ray'|  Procedure == 'Scalling' ) %>%
+  summarise(s=sum(TotalCharges, na.rm= TRUE))
+
