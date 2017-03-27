@@ -122,3 +122,8 @@ earning_consultation <- datahosp %>%
   summarise(sum(`Total Charges`, na.rm = TRUE))
 
 earning_consultation
+
+# Q 16.  Is there a relation between Age and Total Charges paid? 
+
+cor(as.numeric(datahosp$Age), as.numeric(datahosp$`Total Charges`), use ="complete.obs")
+cor.test(as.numeric(datahosp$Age), as.numeric(datahosp$`Total Charges`), use ="complete.obs")
