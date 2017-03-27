@@ -65,3 +65,13 @@ mydf %>%
 
 #Question 9
 unique(hour(Fulltime))
+
+
+# Question 10
+mydf %>% 
+  group_by(id) %>% 
+  summarise(freq=n()) %>% 
+  filter(freq > 1) %>% 
+  count()  
+
+
