@@ -81,7 +81,10 @@ f <-as.numeric(hospitaldata$`Total  Charges`)
 cor.test(x=d,y=f)
 
 "17. Which Age group had highest number of visits?"
-
+z<- ddply(hospitaldata,.(id, Age),nrow )
+repeated1 <-subset(z, z$V1>1)
+repeated1
+View(repeated1)
 "18. What is the total cost earned by Procedure Type X Ray and Scalling together?"
 cost1 <- subset(hospitaldata, Procedure == "X Ray")
 cost2 <- subset(hospitaldata, Procedure == "Scalling")
