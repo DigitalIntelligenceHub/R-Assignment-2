@@ -136,3 +136,19 @@ age_highest_visits <- datahosp %>%
   slice(which.max(freq))
 
 age_highest_visits
+
+# Q. 18  What is the total cost earned by Procedure Type X Ray and Scalling together
+x_ray_earned <- datahosp %>%
+  filter(Procedure == "X Ray") %>%
+  summarise(sum(`Total Charges`, na.rm = TRUE))
+
+x_ray_earned
+
+scalling_earned <- datahosp %>%
+  filter(Procedure == "Scalling") %>%
+  summarise(sum(`Total Charges`, na.rm = TRUE))
+scalling_earned
+
+total_xray_scalling <- x_ray_earned + scalling_earned
+total_xray_scalling
+
