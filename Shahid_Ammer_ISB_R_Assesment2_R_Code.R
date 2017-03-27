@@ -74,4 +74,11 @@ mydf %>%
   filter(freq > 1) %>% 
   count()  
 
+# Question 11
+rep_vis <- mydf %>% 
+  group_by(id) %>% 
+  summarise(freq=n()) %>% 
+  filter(freq > 1) %>%
+  arrange(desc(id))
 
+rep_vis$id
