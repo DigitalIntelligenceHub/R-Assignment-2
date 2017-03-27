@@ -82,3 +82,9 @@ rep_vis <- mydf %>%
   arrange(desc(id))
 
 rep_vis$id
+
+#Question 12
+mydf %>% 
+  group_by(id, Specialty) %>% 
+  summarise(freq=n()) %>% 
+  filter(freq > 1) 
