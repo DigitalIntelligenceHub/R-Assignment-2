@@ -100,3 +100,8 @@ mydf %>%
 mydf$`Amount Balance` <- gsub("-", "", mydf$`Amount Balance`)
 mydf$`Amount Balance`<- as.integer(as.character(gsub(",", "", mydf$`Amount Balance`)))
 mydf %>% summarise(Total=sum(`Amount Balance`,na.rm=TRUE))
+
+#Question 15
+mydf %>%
+  filter(Procedure == 'Consultation') %>%
+  summarise(Sum_of_Consultation = sum(`Total Charges`,na.rm=TRUE))
