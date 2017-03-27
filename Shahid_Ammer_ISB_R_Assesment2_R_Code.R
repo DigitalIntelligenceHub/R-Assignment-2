@@ -62,3 +62,6 @@ mydf %>%
   group_by(hour(Fulltime))  %>% 
   summarise(Freq=n()) %>% 
   slice(which.max(Freq)) 
+
+#Question 9
+unique(hour(Fulltime))
