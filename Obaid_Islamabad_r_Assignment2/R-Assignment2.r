@@ -40,6 +40,13 @@ hdfClean<- hdf
 hdfClean$Age <-as.numeric(as.character(hdfClean$Age))
 mean(hdfClean$Age,na.rm = TRUE) #Average age is 32.7 
 
+abc <-hdfClean %>% 
+  select(Sex,Specialty) %>%
+  group_by(Sex,Specialty) %>%
+  summarize(count=n())
+
+abc
+
 # Q4. How many childerns were entertained?
 count(filter(hdfClean,Age>=1,Age<=12))  #23 childerns were entertained    #Q to ask, if i use length instead of count it gives 15. y?
 
@@ -109,6 +116,8 @@ ggplot(data=VisitsByHour,aes(x=factor(Hour),y=factor(Visits)))+geom_bar(stat='id
 hdfClean <-
   hdfClean %>%
   mutate(Hour = hour(hm(format(strptime(Time,"%I:%M %p"),format="%H:%M"))))
+
+
 
 hdfClean <-
   hdfClean %>%
@@ -221,6 +230,16 @@ earning
 #BUTTTTTT!!!, there are procedures in which xray was done along with some other procedure :same for scalling
 # now for better results, we dig deep
 
+#Replacing the Scalling value with mena(scalling)
+meanScalling <-
+  hdfClean %>%
+  select(Procedure,TotalCharges) %>%
+  filter(Procedure=='Scalling') %>%
+  group_by(Procedure) %>%
+  summarize( Earning=mean(TotalCharges)) 
+meanScalling #2750
+
+
 earning2 <-
   hdfClean %>%  
   select(Procedure,TotalCharges) %>%
@@ -233,7 +252,7 @@ earning2 <-
   ),
   TotalCharges=derivedFactor(
     "300" = (Procedure =='X Ray'),
-    "3000"= (Procedure =='Scalling'),
+    "2750"= (Procedure =='Scalling'),
     .method = "first",
     .default = 0
   ))  %>%
