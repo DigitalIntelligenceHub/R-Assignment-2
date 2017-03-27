@@ -120,3 +120,6 @@ mydf %>%
 mydf %>% 
   filter(Procedure == 'X Ray' | Procedure == 'Scalling') %>%
   summarise(Total_COST = sum(`Total Charges`,na.rm=TRUE))
+
+# Export clean Data Frame
+write.csv(mydf, "CleanData.csv")
