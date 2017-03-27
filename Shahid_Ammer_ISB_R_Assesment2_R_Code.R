@@ -30,5 +30,13 @@ mydf %>% summarize(avg_age = median(mydf$Age, na.rm=TRUE))
 children_entertained <- mydf %>% filter(Age <= 12) %>% count()
 children_entertained
 
-
-
+# 5. Which gender type had what kind of procedure in abundance? i.e. Female visit mostly because of Gynae Problem
+#Question 5
+mydf$Sex <- gsub("-", "", mydf$Sex)
+mydf$Sex <- as.character(Map({function (a) toupper(a)}, mydf$Sex))
+mydf %>% 
+  filter(Sex != "") %>% 
+  group_by(Sex, Specialty)  %>% 
+  summarise(n=n()) %>% 
+  slice(which.max(n)) %>% 
+  arrange(desc(n))
