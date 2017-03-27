@@ -17,3 +17,11 @@ xx <- tbl_df(df)
 df <- separate(df, Date, into = c("Day", "Date"), sep = ",", extra = "merge")
 new <- df %>% count(Day) %>%  slice(which.max(n))
 new
+
+# Question 3
+# What is the average age of patients?
+ages <- hospitaldata$Age
+gsub("-", "NA", ages) 
+df1= as.numeric(ages)
+class(df1)
+mean(df1, na.rm = TRUE)
