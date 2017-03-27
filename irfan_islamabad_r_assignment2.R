@@ -99,3 +99,12 @@ repeated_visitors_same_prob <- datahosp %>%
 
 
 repeated_visitors_same_prob$id
+
+# Q 13.What is the median age for Females and Males? 
+datahosp$Sex <- gsub(x = datahosp$Sex, pattern = "-", replacement = "")
+median_age_female_male <- datahosp%>%
+  filter(Sex != "") %>%
+  group_by(Sex)%>% 
+  summarise(Median=median(Age, na.rm =TRUE))
+
+median_age_female_male
