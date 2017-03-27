@@ -105,3 +105,6 @@ mydf %>% summarise(Total=sum(`Amount Balance`,na.rm=TRUE))
 mydf %>%
   filter(Procedure == 'Consultation') %>%
   summarise(Sum_of_Consultation = sum(`Total Charges`,na.rm=TRUE))
+
+#Question 16
+cor(x=mydf$Age, y=mydf$`Total Charges`, use="complete.obs") 
