@@ -25,3 +25,8 @@ gsub("-", "NA", ages)
 df1= as.numeric(ages)
 class(df1)
 mean(df1, na.rm = TRUE)
+
+# Question 4
+# How many children were entertained? (Make a Bracket of Age from 1-12)
+four <- filter(df, df1< 12)
+count(four, na.rm = TRUE)
