@@ -52,3 +52,12 @@ df %>%
   summarise(sum= sum(TotalCharges, na.rm = TRUE)) %>%  
   slice(which.max(sum)) %>%  
   arrange(desc(sum))
+
+# Question 7
+# Which procedure type earns more money?
+df %>%
+  filter(Procedure != "") %>%
+  group_by(Procedure)  %>%  
+  summarise(sum= sum(TotalCharges, na.rm = TRUE)) %>%  
+  slice(which.max(sum)) %>%  
+  arrange(desc(sum))
