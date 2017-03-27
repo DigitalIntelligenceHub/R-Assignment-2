@@ -41,6 +41,10 @@ names(mydata) <- gsub("\\.", "", names(mydata))
 print(paste("Most visited day of the week is",
             weekdays(mydata$Date[which(table(mydata$Date) == max(table(mydata$Date)))])))
 
+# 3: Average age of patients
+mean(mydata$Age, na.rm = TRUE)
+
+
 
 
 
