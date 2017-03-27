@@ -88,3 +88,10 @@ mydf %>%
   group_by(id, Specialty) %>% 
   summarise(freq=n()) %>% 
   filter(freq > 1) 
+
+
+#Question 13
+mydf %>%
+  filter(Sex != "") %>%
+  group_by(Sex) %>%
+  summarize(median= median(Age, na.rm=TRUE))
