@@ -78,16 +78,16 @@ names(which.max(table(hour(hos$Time))))
 #Question 09
 hos<-
   hos%>%
-  mutate(TimeBracket=ifelse(hour(Time)>=6 & hour(Time)<12,"Morning",TimeBracket))
+  mutate(TimeBracket=ifelse(hour(Time)>=6 | hour(Time)<12,"Morning",TimeBracket))
 hos<-
   hos%>%
-  mutate(TimeBracket=ifelse(hour(Time)>=12 & hour(Time)<16,"Afternoon",TimeBracket))
+  mutate(TimeBracket=ifelse(hour(Time)>=12 | hour(Time)<16,"Afternoon",TimeBracket))
 hos<-
   hos%>%
-  mutate(TimeBracket=ifelse(hour(Time)>=16 & hour(Time)<19,"Evening",TimeBracket))
+  mutate(TimeBracket=ifelse(hour(Time)>=16 | hour(Time)<19,"Evening",TimeBracket))
 hos<-
   hos%>%
-  mutate(TimeBracket=ifelse(hour(Time)>=19 & hour(Time)<6,"Night",TimeBracket))
+  mutate(TimeBracket=ifelse(hour(Time)>=19 | hour(Time)<6,"Night",TimeBracket))
 
 hos$Time<-as.character(hos$Time)
 #Question 10
