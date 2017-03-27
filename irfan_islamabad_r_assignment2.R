@@ -10,3 +10,8 @@ names(datahosp) <- gsub(x = names(datahosp), pattern = "\\.", replacement = " ")
 names(datahosp) <- gsub(x = names(datahosp), pattern = "  ", replacement = " ")
 names(datahosp)
 
+# Q2. Which day of the week is expected to have most visits?
+datahosp <- separate(datahosp, Date, c('Day', 'Date'), extra = "merge", sep = ",")
+
+day_of_week_most_visits <- slice(count(datahosp, Day), which.max(n))
+day_of_week_most_visits
