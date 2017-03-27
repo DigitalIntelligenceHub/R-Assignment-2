@@ -56,8 +56,9 @@ View(repeated)
 View(repeated)
 
 "12. Which patients visited again for the same problem"
-select(group_by(hospitaldata, id,  Specialty))%>%
-     View()
+  problem <- ddply(hospitaldata,.(id, Specialty),nrow)
+    cv<- subset(problem,problem$V1>1)
+     View(cv)
 
 "13. What is the median age for Females and Males?"
 gsub("-", "NA" ,hospitaldata$Age)
