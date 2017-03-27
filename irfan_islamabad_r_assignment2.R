@@ -152,3 +152,5 @@ scalling_earned
 total_xray_scalling <- x_ray_earned + scalling_earned
 total_xray_scalling
 
+# create clean csv
+write.csv(datahosp, "clean_hospital_dataset.csv")
