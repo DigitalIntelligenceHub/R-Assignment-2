@@ -135,5 +135,5 @@ names(which.max(table(hos$Age[hos$Age!=0])))
 #Question 18
 sum(hos$AmountReceived[hos$Procedure=="X Ray" | hos$Procedure=="Scalling"])
 
-write.csv(hos, file = "C:/Users/Saad.Khan/Documents/DIH-Assignment_02/saadkhan_khi_r_assignment2/R-Assignment-2/clean_hospitaldata.csv")
+write.csv(hos, file = "clean_hospitaldata.csv")
 
