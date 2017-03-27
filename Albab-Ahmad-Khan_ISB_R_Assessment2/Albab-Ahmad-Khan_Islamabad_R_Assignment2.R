@@ -128,3 +128,11 @@ df$Age <- as.numeric(df$Age)
     filter(Sex != "") %>%
     group_by(Sex) %>%        
     summarise(Median = median(Age, na.rm=TRUE))
+
+# Question 14
+# What is the total amount in balance?
+df$AmountBalance <- as.character (df$AmountBalance)
+df$AmountBalance <- gsub(x= df$AmountBalance, pattern = "-", replacement = "")
+df$AmountBalance <-  gsub(x= df$AmountBalance, pattern = ",", replacement = "" )
+df$AmountBalance <- as.numeric(df$AmountBalance)
+sum(df$AmountBalance, na.rm=TRUE)
