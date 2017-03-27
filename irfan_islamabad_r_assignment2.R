@@ -29,3 +29,16 @@ number_of_children1
 number_of_children2 <- count(filter(datahosp, Age < 12))
 number_of_children2
 
+
+# Q5. Which gender type had what kind of procedure in abundance? 
+# i.e. Female visit mostly because of Gynae Problem
+datahosp$Sex <- as.character(datahosp$Sex)
+# convert all lower case to upper so that m would be M and f would F
+datahosp$Sex <- toupper(datahosp$Sex)
+
+
+new <- datahosp %>% group_by(Sex, Specialty) %>%
+  summarize(freq = n()) %>%
+  slice(which.max(freq))
+
+new[order(new$freq,decreasing=T)[1:2],]
