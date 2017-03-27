@@ -116,12 +116,6 @@ Consultation_amount <-hospitaldata %>%
   summarise(sum(AmountReceived)) %>%
   print
 
-# Answer 15
-Consultation_amount <-hospitaldata %>%
-  filter(!is.na(AmountReceived), Procedure=='Consultation') %>%
-  summarise(sum(AmountReceived)) %>%
-  print
-  
 # Answer 16
 Age_n_Charges_Relation <- hospitaldata %>%
   filter(!is.na(Age), !is.na(TotalCharges), !grepl("Cancelled",TotalCharges)) %>%
